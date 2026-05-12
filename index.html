@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Calculadora IMC gratis 2025 — Calcula tu Índice de Masa Corporal | OMS</title>
+  <meta name="description" content="Calcula tu IMC gratis en segundos según criterios OMS. Tabla completa, fórmula explicada, diferencias por sexo y recomendaciones personalizadas. Sin registro ni datos almacenados." />
+  <meta name="keywords" content="calculadora imc, calcular imc, índice de masa corporal, imc mujer, imc hombre, calculadora bmi, peso ideal, obesidad imc, tabla imc, imc normal, imc saludable, bmi calculator" />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
+  <meta name="author" content="IMC Calculadora" />
+  <meta name="theme-color" content="#2563EB" />
+  <meta name="color-scheme" content="light dark" />
+  <link rel="canonical" href="https://calculadora-imc.es/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="IMC Calculadora" />
+  <meta property="og:url" content="https://calculadora-imc.es/" />
+  <meta property="og:title" content="Calculadora IMC gratis — Índice de Masa Corporal según OMS 2025" />
+  <meta property="og:description" content="Calcula tu IMC al instante. Tabla completa de categorías OMS, fórmula explicada, diferencias por sexo y consejos personalizados. Gratis, sin registro." />
+  <meta property="og:image" content="https://calculadora-imc.es/og-image.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:locale" content="es_ES" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Calculadora IMC gratis 2025 — Índice de Masa Corporal | OMS" />
+  <meta name="twitter:description" content="Calcula tu IMC en segundos según criterios OMS. Tabla completa, fórmula y recomendaciones personalizadas. Gratis, sin registro." />
+  <meta name="twitter:image" content="https://calculadora-imc.es/og-image.jpg" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 32 32\'><rect width=\'32\' height=\'32\' rx=\'8\' fill=\'%232563EB\'/><circle cx=\'16\' cy=\'12\' r=\'4\' fill=\'none\' stroke=\'white\' stroke-width=\'2\'/><path d=\'M8 24c0-4.4 3.6-8 8-8s8 3.6 8 8\' fill=\'none\' stroke=\'white\' stroke-width=\'2\'/>\</svg>" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: { extend: { fontFamily: { sans: ["Inter","system-ui","sans-serif"] } } }
+    }
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+  <link rel="stylesheet" href="css/styles.css" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebApplication",
+        "@id": "https://calculadora-imc.es/#app",
+        "name": "Calculadora IMC",
+        "alternateName": "Calculadora BMI",
+        "url": "https://calculadora-imc.es/",
+        "description": "Calcula tu Índice de Masa Corporal (IMC) al instante según criterios OMS. Herramienta gratuita con tabla de categorías, fórmula explicada y recomendaciones personalizadas.",
+        "applicationCategory": "HealthApplication",
+        "operatingSystem": "Web",
+        "browserRequirements": "Requires JavaScript",
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" },
+        "inLanguage": "es-ES",
+        "author": { "@type": "Organization", "name": "IMC Calculadora", "url": "https://calculadora-imc.es/" }
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://calculadora-imc.es/#faq",
+        "mainEntity": [
+          { "@type": "Question", "name": "¿Qué IMC es normal?", "acceptedAnswer": { "@type": "Answer", "text": "Un IMC entre 18,5 y 24,9 se considera peso normal o saludable según la OMS. Este rango se asocia con el menor riesgo de enfermedades relacionadas con el peso." } },
+          { "@type": "Question", "name": "¿El IMC es fiable?", "acceptedAnswer": { "@type": "Answer", "text": "El IMC es una herramienta de cribado útil y ampliamente validada para la población general. No evalúa directamente la composición corporal ni distingue entre masa muscular y grasa. Debe interpretarse junto con otras medidas como el perímetro de cintura." } },
+          { "@type": "Question", "name": "¿Cómo puedo bajar mi IMC?", "acceptedAnswer": { "@type": "Answer", "text": "Para reducir el IMC se recomienda combinar una alimentación equilibrada con un déficit calórico moderado, actividad física regular (mínimo 150 minutos semanales de intensidad moderada), descanso de calidad y gestión del estrés." } },
+          { "@type": "Question", "name": "¿Cuál es el IMC ideal en mujeres?", "acceptedAnswer": { "@type": "Answer", "text": "Para las mujeres adultas, el rango saludable de IMC es el mismo que para hombres: entre 18,5 y 24,9 según la OMS. Las mujeres tienen de forma natural mayor porcentaje de grasa corporal, lo que es fisiológicamente normal." } },
+          { "@type": "Question", "name": "¿Cuál es el IMC ideal en hombres?", "acceptedAnswer": { "@type": "Answer", "text": "Para los hombres adultos, el IMC saludable está también entre 18,5 y 24,9. Los hombres tienden a tener mayor masa muscular, lo que puede elevar ligeramente el IMC sin representar exceso de grasa corporal." } },
+          { "@type": "Question", "name": "¿El IMC sirve para deportistas?", "acceptedAnswer": { "@type": "Answer", "text": "No es el indicador más adecuado para personas con alta masa muscular. Un atleta de fuerza puede tener un IMC de sobrepeso pese a tener un porcentaje de grasa muy bajo. Se recomienda complementar con bioimpedancia o pliegues cutáneos." } },
+          { "@type": "Question", "name": "¿Qué pasa si tengo el IMC alto?", "acceptedAnswer": { "@type": "Answer", "text": "Un IMC ≥25 se asocia con mayor riesgo de enfermedades cardiovasculares, diabetes tipo 2, hipertensión, apnea del sueño y ciertos cánceres. El riesgo real depende de muchos factores; consulta con tu médico para una evaluación completa." } },
+          { "@type": "Question", "name": "¿Cómo se calcula el IMC?", "acceptedAnswer": { "@type": "Answer", "text": "La fórmula es: IMC = peso (kg) / altura² (m). Ejemplo: 70 kg / 1,75² = 22,9. Nuestra calculadora realiza este cálculo automáticamente al introducir tus datos." } },
+          { "@type": "Question", "name": "¿El IMC es lo mismo que el BMI?", "acceptedAnswer": { "@type": "Answer", "text": "Sí. BMI (Body Mass Index) es el término en inglés para IMC (Índice de Masa Corporal). Ambos se refieren al mismo indicador, calculado con la misma fórmula y los mismos rangos de clasificación." } },
+          { "@type": "Question", "name": "¿A partir de qué IMC hay obesidad?", "acceptedAnswer": { "@type": "Answer", "text": "La OMS clasifica obesidad a partir de IMC 30: Grado I (30–34,9), Grado II (35–39,9) y Grado III o mórbida (≥40). El rango 25–29,9 es sobrepeso, factor de riesgo pero no obesidad." } },
+          { "@type": "Question", "name": "¿El IMC es válido para niños?", "acceptedAnswer": { "@type": "Answer", "text": "Para niños y adolescentes (2–18 años) se usan percentiles ajustados por edad y sexo, no los rangos adultos. Esta calculadora está diseñada exclusivamente para adultos mayores de 18 años." } },
+          { "@type": "Question", "name": "¿Cómo varía el IMC saludable con la edad?", "acceptedAnswer": { "@type": "Answer", "text": "Los rangos OMS (18,5–24,9) aplican a adultos de cualquier edad. Algunos estudios sugieren que en mayores de 65 años un IMC hasta 27 puede ser aceptable, ya que una reserva de peso moderada puede ser protectora. Consulta con tu médico para valoración individualizada." } },
+          { "@type": "Question", "name": "¿El IMC es válido durante el embarazo?", "acceptedAnswer": { "@type": "Answer", "text": "No. Durante el embarazo el IMC no es un indicador válido para evaluar el peso, ya que el aumento de peso es normal y necesario para el desarrollo del bebé. El seguimiento debe realizarlo siempre el equipo médico o la matrona." } }
+        ]
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://calculadora-imc.es/" },
+          { "@type": "ListItem", "position": 2, "name": "Calculadora IMC", "item": "https://calculadora-imc.es/#calculadora" }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body class="antialiased">
+<!-- ======= NAVBAR ======= -->
+<header class="navbar">
+  <div class="max-w-5xl mx-auto px-4 sm:px-6 flex items-center justify-between h-full">
+    <a href="#hero" class="flex items-center gap-2.5" aria-label="Ir al inicio">
+      <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <rect width="28" height="28" rx="7" fill="#2563EB"/>
+        <circle cx="14" cy="10" r="3.5" stroke="white" stroke-width="1.8" fill="none"/>
+        <path d="M7 21.5c0-3.87 3.13-7 7-7s7 3.13 7 7" stroke="white" stroke-width="1.8" stroke-linecap="round" fill="none"/>
+        <path d="M14 17v4M12 21h4" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+      </svg>
+      <span class="font-semibold text-sm tracking-tight" style="color:var(--text-primary)">
+        IMC <span style="color:var(--accent)">Calculadora</span>
+      </span>
+    </a>
+    <nav class="hidden md:flex items-center gap-1" aria-label="Navegación">
+      <a href="#que-es-imc" class="px-3 py-1.5 text-sm rounded-md transition-colors" style="color:var(--text-secondary)" onmouseover="this.style.color=\'var(--text-primary)\';this.style.background=\'var(--surface-2)\'" onmouseout="this.style.color=\'var(--text-secondary)\';this.style.background=\'transparent\'">Qué es el IMC</a>
+      <a href="#tabla-imc"  class="px-3 py-1.5 text-sm rounded-md transition-colors" style="color:var(--text-secondary)" onmouseover="this.style.color=\'var(--text-primary)\';this.style.background=\'var(--surface-2)\'" onmouseout="this.style.color=\'var(--text-secondary)\';this.style.background=\'transparent\'">Tabla</a>
+      <a href="#faq"        class="px-3 py-1.5 text-sm rounded-md transition-colors" style="color:var(--text-secondary)" onmouseover="this.style.color=\'var(--text-primary)\';this.style.background=\'var(--surface-2)\'" onmouseout="this.style.color=\'var(--text-secondary)\';this.style.background=\'transparent\'">FAQ</a>
+    </nav>
+    <button id="darkToggle" class="theme-toggle" aria-label="Cambiar modo oscuro">
+      <svg id="iconLight" class="w-4 h-4 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><path stroke-linecap="round" d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+      <svg id="iconDark"  class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/></svg>
+    </button>
+  </div>
+</header>
+<!-- ======= HERO + PANEL INTEGRADO ======= -->
+<section id="hero" class="hero-section">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 w-full py-10 lg:py-14">
+
+    <!-- Cabecera compacta centrada -->
+    <div class="text-center mb-8 lg:mb-10">
+      <div class="trust-badge inline-flex mb-5">
+        <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+        Basado en criterios OMS · Actualizado 2025
+      </div>
+      <h1 class="text-4xl sm:text-5xl font-bold tracking-tight mb-4" style="color:var(--text-primary);letter-spacing:-0.03em">
+        Calcula tu <span style="color:var(--accent)">IMC</span> al instante
+      </h1>
+      <p class="text-base max-w-xl mx-auto leading-relaxed mb-6" style="color:var(--text-secondary)">
+        Descubre tu <strong style="color:var(--text-primary)">Índice de Masa Corporal</strong> y si tu peso es saludable según los criterios de la <strong style="color:var(--text-primary)">Organización Mundial de la Salud</strong>. Gratis, sin registro.
+      </p>
+      <div class="flex items-center justify-center flex-wrap gap-2" style="color:var(--text-muted)">
+        <span class="feature-pill">Resultado inmediato</span>
+        <span class="feature-pill">kg/cm · lb/in</span>
+        <span class="feature-pill">100% privado</span>
+        <span class="feature-pill">Tabla OMS completa</span>
+      </div>
+    </div>
+
+    <!-- Panel integrado calculadora + resultado -->
+    <div class="calc-panel" id="calculadora">
+
+      <!-- ARRIBA: Barra de inputs -->
+      <div class="calc-panel__top">
+        <div class="calc-inputs-bar">
+          <!-- Altura -->
+          <div class="cib-field">
+            <label class="cib-label" for="height">Altura <span id="heightUnit" class="cib-unit">(cm)</span></label>
+            <input id="height" class="cib-input" type="number" min="50" max="300" step="0.1" placeholder="175"
+              autocomplete="off" inputmode="decimal" aria-label="Altura"/>
+            <p id="heightError" class="cib-error hidden">Valor no válido</p>
+          </div>
+          <!-- Divisor -->
+          <div class="cib-divider" aria-hidden="true"></div>
+          <!-- Peso -->
+          <div class="cib-field">
+            <label class="cib-label" for="weight">Peso <span id="weightUnit" class="cib-unit">(kg)</span></label>
+            <input id="weight" class="cib-input" type="number" min="1" max="500" step="0.1" placeholder="70"
+              autocomplete="off" inputmode="decimal" aria-label="Peso"/>
+            <p id="weightError" class="cib-error hidden">Valor no válido</p>
+          </div>
+          <!-- Divisor -->
+          <div class="cib-divider" aria-hidden="true"></div>
+          <!-- Edad -->
+          <div class="cib-field cib-field--sm">
+            <label class="cib-label" for="age">Edad <span class="cib-unit">(opt.)</span></label>
+            <input id="age" class="cib-input" type="number" min="2" max="120" step="1" placeholder="30"
+              autocomplete="off" inputmode="numeric" aria-label="Edad"/>
+          </div>
+          <!-- Divisor -->
+          <div class="cib-divider" aria-hidden="true"></div>
+          <!-- Sexo -->
+          <div class="cib-field cib-field--gender">
+            <label class="cib-label">Sexo biológico</label>
+            <div class="cib-gender">
+              <div class="gender-option selected" id="gMale" onclick="setGender('male')" role="radio" aria-checked="true" tabindex="0">
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="10" cy="10" r="6" stroke-width="2"/><path d="M14.5 5.5L19 1M19 1h-4M19 1v4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                Hombre
+              </div>
+              <div class="gender-option" id="gFemale" onclick="setGender('female')" role="radio" aria-checked="false" tabindex="0">
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="9" r="6" stroke-width="2"/><path d="M12 15v6M9 19h6" stroke-width="2" stroke-linecap="round"/></svg>
+                Mujer
+              </div>
+            </div>
+          </div>
+          <!-- Botón -->
+          <button id="calcBtn" class="cib-btn">
+            Calcular
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M13 7l5 5m0 0l-5 5m5-5H6"/></svg>
+          </button>
+        </div>
+        <!-- Subrow: unidades + trust -->
+        <div class="calc-subrow">
+          <div class="unit-toggle">
+            <button class="unit-btn active" id="btnMetric" onclick="setUnit('metric')">kg / cm</button>
+            <button class="unit-btn" id="btnImperial" onclick="setUnit('imperial')">lb / in</button>
+          </div>
+          <div class="cp-trust">
+            <svg class="w-3 h-3" style="color:#4ade80" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
+            <span>100% privado</span>
+            <span class="cp-trust-dot">·</span>
+            <span>Sin registro</span>
+            <span class="cp-trust-dot">·</span>
+            <span>Criterios OMS</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ABAJO: Resultado -->
+      <div class="calc-panel__bottom">
+
+        <!-- Estado vacío -->
+        <div id="resultPlaceholder" class="result-placeholder">
+          <div class="rp-gauge" aria-hidden="true">
+            <svg width="140" height="82" viewBox="0 0 180 104" class="overflow-visible">
+              <path d="M 14 98 A 76 76 0 0 1 166 98" fill="none" stroke-width="10" stroke-linecap="round" style="stroke:var(--surface-3)"/>
+              <g style="transform-origin:90px 98px;transform:rotate(-90deg)">
+                <line x1="90" y1="98" x2="90" y2="30" stroke-width="2" stroke-linecap="round" style="stroke:var(--border-strong)"/>
+              </g>
+              <circle cx="90" cy="98" r="5" style="fill:var(--border-strong)"/>
+            </svg>
+          </div>
+          <div class="rp-score">—</div>
+          <p class="rp-label">Introduce tus datos y pulsa <strong>Calcular</strong></p>
+          <p class="rp-desc">Obtendrás tu categoría OMS, peso saludable, barra de escala y recomendaciones según tu sexo.</p>
+        </div>
+
+        <!-- Resultado completo -->
+        <div id="results" class="hidden">
+          <div class="res-layout">
+            <!-- Col 1: Gauge -->
+            <div class="res-col-gauge">
+              <svg width="180" height="104" viewBox="0 0 180 104" class="overflow-visible" aria-hidden="true">
+                <path d="M 14 98 A 76 76 0 0 1 166 98" fill="none" stroke-width="12" stroke-linecap="round" style="stroke:var(--surface-3)"/>
+                <path d="M 14 98 A 76 76 0 0 1 166 98" fill="none" stroke="url(#gGrad)" stroke-width="12" stroke-linecap="round"
+                  stroke-dasharray="239" stroke-dashoffset="239" id="gaugeArc" class="gauge-arc"/>
+                <defs>
+                  <linearGradient id="gGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                    <stop offset="0%"   stop-color="#93c5fd"/>
+                    <stop offset="27%"  stop-color="#4ade80"/>
+                    <stop offset="54%"  stop-color="#fcd34d"/>
+                    <stop offset="77%"  stop-color="#f97316"/>
+                    <stop offset="100%" stop-color="#dc2626"/>
+                  </linearGradient>
+                </defs>
+                <g id="gaugeNeedle" class="gauge-needle" style="transform-origin:90px 98px;transform:rotate(-90deg)">
+                  <line x1="90" y1="98" x2="90" y2="28" stroke-width="2.5" stroke-linecap="round" style="stroke:var(--text-primary)"/>
+                </g>
+                <circle cx="90" cy="98" r="6" style="fill:var(--text-primary)"/>
+              </svg>
+              <div id="bmiScore" class="res-score number-pop font-tabular">—</div>
+              <div id="bmiCategory" class="res-category">—</div>
+              <div id="bmiCategoryDesc" class="res-category-desc">—</div>
+              <div class="res-actions no-print">
+                <button onclick="copyLink()" class="btn-ghost">
+                  <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"/></svg>
+                  Compartir
+                </button>
+                <button onclick="window.print()" class="btn-ghost">
+                  <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"/></svg>
+                  Imprimir
+                </button>
+              </div>
+            </div>
+            <!-- Col 2: Info + Barra + Chart -->
+            <div class="res-col-detail">
+              <div id="resultCard" class="res-card bg-cat-normal border-2">
+                <p id="resultMessage" class="res-card-msg"></p>
+                <div class="res-card-metrics">
+                  <div>
+                    <p class="res-metric-label">Peso saludable</p>
+                    <p id="healthyRange" class="res-metric-value"></p>
+                  </div>
+                  <div>
+                    <p class="res-metric-label">Objetivo</p>
+                    <p id="goalSuggestion" class="res-metric-goal"></p>
+                  </div>
+                </div>
+              </div>
+              <div class="res-rangebar">
+                <p class="res-rangebar-label">Escala IMC</p>
+                <div class="range-bar-wrap">
+                  <div class="h-full flex rounded-full overflow-hidden">
+                    <div style="width:15%;background:#93c5fd" title="Bajo peso"></div>
+                    <div style="width:27%;background:#4ade80" title="Normal"></div>
+                    <div style="width:20%;background:#fcd34d" title="Sobrepeso"></div>
+                    <div style="width:18%;background:#f97316" title="Obesidad I"></div>
+                    <div style="width:12%;background:#ef4444" title="Obesidad II"></div>
+                    <div style="width:8%;background:#dc2626"  title="Obesidad III"></div>
+                  </div>
+                  <div id="bmiMarker" class="bmi-marker hidden" style="left:0%">
+                    <div class="bmi-marker-dot"></div>
+                  </div>
+                </div>
+                <div class="flex justify-between text-xs font-medium mt-1.5" style="color:var(--text-muted)">
+                  <span>16</span><span>18,5</span><span>25</span><span>30</span><span>35</span><span>40+</span>
+                </div>
+              </div>
+              <div class="bmi-chart-wrap">
+                <canvas id="bmiChart" aria-label="Gráfico categorías IMC" role="img"></canvas>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div><!-- /calc-panel -->
+  </div>
+</section>
+<div class="section-divider"></div>
+<!-- ======= QUÉ ES EL IMC ======= -->
+<section id="que-es-imc" class="py-16 md:py-24" style="background:var(--surface)">
+  <div class="max-w-5xl mx-auto px-4 sm:px-6">
+    <div class="max-w-xl mb-12 reveal">
+      <p class="section-label mb-3">Guía clínica</p>
+      <h2 class="text-3xl font-bold tracking-tight mb-4" style="color:var(--text-primary);letter-spacing:-0.025em">¿Qué es el Índice de Masa Corporal?</h2>
+      <p class="text-base leading-relaxed" style="color:var(--text-secondary)">El <strong style="color:var(--text-primary)">Índice de Masa Corporal (IMC)</strong> —también conocido como BMI en inglés— es el indicador de referencia internacional para evaluar el peso corporal en relación con la estatura, adoptado por la OMS como estándar de salud pública mundial.</p>
+    </div>
+    <div class="grid md:grid-cols-3 gap-5">
+      <div class="card card-hover reveal">
+        <div class="w-9 h-9 rounded-lg flex items-center justify-center mb-4" style="background:var(--accent-light)">
+          <svg class="w-5 h-5" style="color:var(--accent)" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+        </div>
+        <h3 class="font-semibold text-sm mb-2" style="color:var(--text-primary)">Definición</h3>
+        <p class="text-sm leading-relaxed" style="color:var(--text-secondary)">Desarrollado por Adolphe Quetelet en el siglo XIX, el IMC estima la grasa corporal a partir del peso y la altura. La OMS lo adoptó como herramienta estándar de cribado en salud pública.</p>
+      </div>
+      <div class="card card-hover reveal" style="transition-delay:0.08s">
+        <div class="w-9 h-9 rounded-lg flex items-center justify-center mb-4" style="background:var(--accent-light)">
+          <svg class="w-5 h-5" style="color:var(--accent)" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4"/></svg>
+        </div>
+        <h3 class="font-semibold text-sm mb-3" style="color:var(--text-primary)">Fórmula de cálculo</h3>
+        <div class="rounded-lg p-4 text-center mb-3" style="background:var(--surface-2);border:1px solid var(--border)">
+          <p class="text-xs font-medium mb-1" style="color:var(--text-muted)">IMC =</p>
+          <p class="text-base font-bold" style="color:var(--accent)">peso (kg)</p>
+          <div class="my-1 mx-auto" style="width:72px;height:1px;background:var(--border-strong)"></div>
+          <p class="text-base font-bold" style="color:var(--accent)">altura² (m)</p>
+        </div>
+        <p class="text-xs" style="color:var(--text-muted)">Ej: 70 kg ÷ 1,75² m = <strong style="color:var(--text-secondary)">22,9</strong></p>
+      </div>
+      <div class="card card-hover reveal" style="transition-delay:0.16s">
+        <div class="w-9 h-9 rounded-lg flex items-center justify-center mb-4" style="background:var(--accent-light)">
+          <svg class="w-5 h-5" style="color:var(--accent)" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+        </div>
+        <h3 class="font-semibold text-sm mb-2" style="color:var(--text-primary)">Utilidad clínica</h3>
+        <p class="text-sm leading-relaxed" style="color:var(--text-secondary)">Herramienta de cribado para identificar categorías de peso asociadas a mayor riesgo de enfermedades cardiovasculares, diabetes tipo 2 y otras patologías metabólicas crónicas.</p>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="section-divider"></div>
+<!-- ======= TABLA IMC ======= -->
+<section id="tabla-imc" class="py-16 md:py-24" style="background:var(--surface-2)">
+  <div class="max-w-5xl mx-auto px-4 sm:px-6">
+    <div class="max-w-xl mb-10 reveal">
+      <p class="section-label mb-3">Clasificación OMS</p>
+      <h2 class="text-3xl font-bold tracking-tight mb-3" style="color:var(--text-primary);letter-spacing:-0.025em">Tabla IMC por Categorías</h2>
+      <p class="text-sm" style="color:var(--text-secondary)">Clasificación oficial de la OMS válida para adultos de 18 años en adelante. Incluye rango de IMC, nivel de riesgo y estado de salud asociado.</p>
+    </div>
+    <div class="reveal rounded-xl overflow-hidden" style="border:1px solid var(--border);background:var(--surface)">
+      <div class="overflow-x-auto">
+        <table class="w-full text-sm" aria-label="Tabla de clasificación IMC según la OMS">
+          <thead>
+            <tr style="background:var(--surface-2);border-bottom:1px solid var(--border)">
+              <th class="text-left py-3 px-5 font-semibold text-xs uppercase tracking-wider" style="color:var(--text-muted)">Categoría</th>
+              <th class="text-center py-3 px-5 font-semibold text-xs uppercase tracking-wider" style="color:var(--text-muted)">IMC (kg/m²)</th>
+              <th class="text-center py-3 px-5 font-semibold text-xs uppercase tracking-wider" style="color:var(--text-muted)">Riesgo</th>
+              <th class="text-center py-3 px-5 font-semibold text-xs uppercase tracking-wider hidden sm:table-cell" style="color:var(--text-muted)">Estado</th>
+            </tr>
+          </thead>
+          <tbody style="border-collapse:collapse">
+            <tr style="border-bottom:1px solid var(--border)">
+              <td class="py-3.5 px-5 font-medium" style="color:#2563eb"><span class="inline-flex items-center gap-2"><span class="w-2 h-2 rounded-full inline-block" style="background:#93c5fd"></span>Bajo peso</span></td>
+              <td class="py-3.5 px-5 text-center font-mono text-xs" style="color:var(--text-secondary)">&lt; 18,5</td>
+              <td class="py-3.5 px-5 text-center text-xs" style="color:var(--text-secondary)">Moderado</td>
+              <td class="py-3.5 px-5 text-center hidden sm:table-cell"><span class="text-xs font-medium px-2 py-0.5 rounded-full" style="background:#eff6ff;color:#1d4ed8;border:1px solid #bfdbfe">Atención</span></td>
+            </tr>
+            <tr style="border-bottom:1px solid var(--border);background:rgba(22,163,74,0.03)">
+              <td class="py-3.5 px-5 font-medium" style="color:#16a34a"><span class="inline-flex items-center gap-2"><span class="w-2 h-2 rounded-full inline-block" style="background:#4ade80"></span>Peso normal</span></td>
+              <td class="py-3.5 px-5 text-center font-mono text-xs" style="color:var(--text-secondary)">18,5 – 24,9</td>
+              <td class="py-3.5 px-5 text-center text-xs" style="color:var(--text-secondary)">Bajo</td>
+              <td class="py-3.5 px-5 text-center hidden sm:table-cell"><span class="text-xs font-medium px-2 py-0.5 rounded-full" style="background:#f0fdf4;color:#15803d;border:1px solid #bbf7d0">Saludable</span></td>
+            </tr>
+            <tr style="border-bottom:1px solid var(--border)">
+              <td class="py-3.5 px-5 font-medium" style="color:#d97706"><span class="inline-flex items-center gap-2"><span class="w-2 h-2 rounded-full inline-block" style="background:#fcd34d"></span>Sobrepeso</span></td>
+              <td class="py-3.5 px-5 text-center font-mono text-xs" style="color:var(--text-secondary)">25,0 – 29,9</td>
+              <td class="py-3.5 px-5 text-center text-xs" style="color:var(--text-secondary)">Aumentado</td>
+              <td class="py-3.5 px-5 text-center hidden sm:table-cell"><span class="text-xs font-medium px-2 py-0.5 rounded-full" style="background:#fffbeb;color:#b45309;border:1px solid #fde68a">Precaución</span></td>
+            </tr>
+            <tr style="border-bottom:1px solid var(--border)">
+              <td class="py-3.5 px-5 font-medium" style="color:#ea580c"><span class="inline-flex items-center gap-2"><span class="w-2 h-2 rounded-full inline-block" style="background:#f97316"></span>Obesidad I</span></td>
+              <td class="py-3.5 px-5 text-center font-mono text-xs" style="color:var(--text-secondary)">30,0 – 34,9</td>
+              <td class="py-3.5 px-5 text-center text-xs" style="color:var(--text-secondary)">Alto</td>
+              <td class="py-3.5 px-5 text-center hidden sm:table-cell"><span class="text-xs font-medium px-2 py-0.5 rounded-full" style="background:#fff7ed;color:#c2410c;border:1px solid #fed7aa">Alto</span></td>
+            </tr>
+            <tr style="border-bottom:1px solid var(--border)">
+              <td class="py-3.5 px-5 font-medium" style="color:#dc2626"><span class="inline-flex items-center gap-2"><span class="w-2 h-2 rounded-full inline-block" style="background:#ef4444"></span>Obesidad II</span></td>
+              <td class="py-3.5 px-5 text-center font-mono text-xs" style="color:var(--text-secondary)">35,0 – 39,9</td>
+              <td class="py-3.5 px-5 text-center text-xs" style="color:var(--text-secondary)">Muy alto</td>
+              <td class="py-3.5 px-5 text-center hidden sm:table-cell"><span class="text-xs font-medium px-2 py-0.5 rounded-full" style="background:#fef2f2;color:#991b1b;border:1px solid #fecaca">Muy alto</span></td>
+            </tr>
+            <tr>
+              <td class="py-3.5 px-5 font-medium" style="color:#9333ea"><span class="inline-flex items-center gap-2"><span class="w-2 h-2 rounded-full inline-block" style="background:#c084fc"></span>Obesidad III</span></td>
+              <td class="py-3.5 px-5 text-center font-mono text-xs" style="color:var(--text-secondary)">≥ 40,0</td>
+              <td class="py-3.5 px-5 text-center text-xs" style="color:var(--text-secondary)">Extremo</td>
+              <td class="py-3.5 px-5 text-center hidden sm:table-cell"><span class="text-xs font-medium px-2 py-0.5 rounded-full" style="background:#faf5ff;color:#7e22ce;border:1px solid #e9d5ff">Crítico</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="px-5 py-2.5 text-xs" style="background:var(--surface-2);border-top:1px solid var(--border);color:var(--text-muted)">
+        Fuente: Organización Mundial de la Salud (OMS/WHO) — Clasificación IMC para adultos ≥ 18 años. Los valores son los mismos para hombres y mujeres.
+      </div>
+    </div>
+  </div>
+</section>
+<div class="section-divider"></div>
+<!-- ======= HOMBRES VS MUJERES ======= -->
+<section id="imc-sexo" class="py-16 md:py-24" style="background:var(--surface)">
+  <div class="max-w-5xl mx-auto px-4 sm:px-6">
+    <div class="max-w-xl mb-12 reveal">
+      <p class="section-label mb-3">Diferencias fisiológicas</p>
+      <h2 class="text-3xl font-bold tracking-tight mb-4" style="color:var(--text-primary);letter-spacing:-0.025em">IMC en hombres y mujeres</h2>
+      <p class="text-sm leading-relaxed" style="color:var(--text-secondary)">Los rangos OMS son idénticos para ambos sexos, pero la composición corporal y distribución de grasa presentan diferencias fisiológicas relevantes.</p>
+    </div>
+    <div class="grid md:grid-cols-2 gap-5">
+      <div class="card card-hover reveal">
+        <div class="flex items-center gap-3 mb-5 pb-5" style="border-bottom:1px solid var(--border)">
+          <div class="w-10 h-10 rounded-lg flex items-center justify-center" style="background:var(--surface-2);border:1px solid var(--border)">
+            <svg class="w-5 h-5" style="color:var(--text-secondary)" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="10" cy="9" r="5" stroke-width="2"/><path d="M14 5l5-5M19 0h-4M19 0v4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <div>
+            <h3 class="font-semibold text-base" style="color:var(--text-primary)">Hombres</h3>
+            <p class="text-xs" style="color:var(--text-muted)">IMC saludable: 18,5 – 24,9</p>
+          </div>
+        </div>
+        <ul class="space-y-3 text-sm" style="color:var(--text-secondary)">
+          <li class="flex gap-3 leading-relaxed"><span class="mt-1.5 w-1.5 h-1.5 rounded-full shrink-0" style="background:var(--border-strong)"></span>Mayor proporción de masa muscular, lo que puede elevar el IMC sin indicar exceso de grasa.</li>
+          <li class="flex gap-3 leading-relaxed"><span class="mt-1.5 w-1.5 h-1.5 rounded-full shrink-0" style="background:var(--border-strong)"></span>Distribución adiposa preferentemente abdominal (patrón androide), con mayor riesgo cardiovascular asociado.</li>
+          <li class="flex gap-3 leading-relaxed"><span class="mt-1.5 w-1.5 h-1.5 rounded-full shrink-0" style="background:var(--border-strong)"></span>Porcentaje de grasa corporal saludable: 8–24%. En hombres muy musculados, complementar con bioimpedancia.</li>
+        </ul>
+      </div>
+      <div class="card card-hover reveal" style="transition-delay:0.1s">
+        <div class="flex items-center gap-3 mb-5 pb-5" style="border-bottom:1px solid var(--border)">
+          <div class="w-10 h-10 rounded-lg flex items-center justify-center" style="background:var(--surface-2);border:1px solid var(--border)">
+            <svg class="w-5 h-5" style="color:var(--text-secondary)" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="8" r="5" stroke-width="2"/><path d="M12 13v8M9.5 18.5h5" stroke-width="2" stroke-linecap="round"/></svg>
+          </div>
+          <div>
+            <h3 class="font-semibold text-base" style="color:var(--text-primary)">Mujeres</h3>
+            <p class="text-xs" style="color:var(--text-muted)">IMC saludable: 18,5 – 24,9</p>
+          </div>
+        </div>
+        <ul class="space-y-3 text-sm" style="color:var(--text-secondary)">
+          <li class="flex gap-3 leading-relaxed"><span class="mt-1.5 w-1.5 h-1.5 rounded-full shrink-0" style="background:var(--border-strong)"></span>Mayor porcentaje de grasa corporal de forma fisiológica (20–35% saludable), imprescindible para funciones hormonales y reproductivas.</li>
+          <li class="flex gap-3 leading-relaxed"><span class="mt-1.5 w-1.5 h-1.5 rounded-full shrink-0" style="background:var(--border-strong)"></span>Distribución periférica (caderas, muslos) con menor riesgo cardiovascular que el patrón abdominal.</li>
+          <li class="flex gap-3 leading-relaxed"><span class="mt-1.5 w-1.5 h-1.5 rounded-full shrink-0" style="background:var(--border-strong)"></span>Tras la menopausia la grasa se redistribuye hacia el abdomen, incrementando el riesgo metabólico aunque el IMC sea aparentemente normal.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="section-divider"></div>
+<!-- ======= LIMITACIONES ======= -->
+<section id="limitaciones" class="py-16 md:py-24" style="background:var(--surface-2)">
+  <div class="max-w-5xl mx-auto px-4 sm:px-6">
+    <div class="max-w-xl mb-12 reveal">
+      <p class="section-label mb-3">Contexto clínico</p>
+      <h2 class="text-3xl font-bold tracking-tight mb-4" style="color:var(--text-primary);letter-spacing:-0.025em">Limitaciones del IMC</h2>
+      <p class="text-sm leading-relaxed" style="color:var(--text-secondary)">El IMC es una herramienta de cribado poblacional, no un diagnóstico individual. Interpreta los resultados en su contexto adecuado.</p>
+    </div>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-6">
+      <div class="card card-hover reveal">
+        <p class="text-xs font-bold uppercase tracking-widest mb-2" style="color:var(--text-muted)">01</p>
+        <h3 class="font-semibold text-sm mb-2" style="color:var(--text-primary)">No mide grasa directamente</h3>
+        <p class="text-xs leading-relaxed" style="color:var(--text-secondary)">El IMC no distingue entre tejido muscular y adiposo. Refleja la relación peso/altura, pero no la composición corporal real.</p>
+      </div>
+      <div class="card card-hover reveal" style="transition-delay:0.05s">
+        <p class="text-xs font-bold uppercase tracking-widest mb-2" style="color:var(--text-muted)">02</p>
+        <h3 class="font-semibold text-sm mb-2" style="color:var(--text-primary)">Deportistas y atletas</h3>
+        <p class="text-xs leading-relaxed" style="color:var(--text-secondary)">La alta masa muscular eleva el IMC sin exceso de grasa. Para deportistas se recomienda bioimpedancia o pliegues cutáneos.</p>
+      </div>
+      <div class="card card-hover reveal" style="transition-delay:0.1s">
+        <p class="text-xs font-bold uppercase tracking-widest mb-2" style="color:var(--text-muted)">03</p>
+        <h3 class="font-semibold text-sm mb-2" style="color:var(--text-primary)">Edad y composición</h3>
+        <p class="text-xs leading-relaxed" style="color:var(--text-secondary)">Con el envejecimiento se pierde masa muscular y se acumula grasa. El IMC puede parecer normal con composición corporal desfavorable.</p>
+      </div>
+      <div class="card card-hover reveal" style="transition-delay:0.15s">
+        <p class="text-xs font-bold uppercase tracking-widest mb-2" style="color:var(--text-muted)">04</p>
+        <h3 class="font-semibold text-sm mb-2" style="color:var(--text-primary)">Grasa visceral abdominal</h3>
+        <p class="text-xs leading-relaxed" style="color:var(--text-secondary)">La grasa intraabdominal es el mayor predictor de riesgo cardiovascular. El perímetro de cintura complementa al IMC en esta evaluación.</p>
+      </div>
+      <div class="card card-hover reveal" style="transition-delay:0.2s">
+        <p class="text-xs font-bold uppercase tracking-widest mb-2" style="color:var(--text-muted)">05</p>
+        <h3 class="font-semibold text-sm mb-2" style="color:var(--text-primary)">Variabilidad étnica</h3>
+        <p class="text-xs leading-relaxed" style="color:var(--text-secondary)">Para población asiática el riesgo comienza con IMC ≥23 (sobrepeso) y ≥27,5 (obesidad), según recomendaciones específicas de la OMS.</p>
+      </div>
+      <div class="card card-hover reveal" style="transition-delay:0.25s">
+        <p class="text-xs font-bold uppercase tracking-widest mb-2" style="color:var(--text-muted)">06</p>
+        <h3 class="font-semibold text-sm mb-2" style="color:var(--text-primary)">Solo para adultos</h3>
+        <p class="text-xs leading-relaxed" style="color:var(--text-secondary)">En menores de 18 años se utilizan percentiles ajustados por edad y sexo. Esta herramienta está diseñada exclusivamente para adultos.</p>
+      </div>
+    </div>
+    <div class="reveal rounded-xl p-5 flex gap-4" style="background:var(--accent-light);border:1px solid var(--accent-muted)">
+      <div class="w-8 h-8 rounded-lg flex items-center justify-center shrink-0" style="background:rgba(37,99,235,0.12)">
+        <svg class="w-4 h-4" style="color:var(--accent)" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+      </div>
+      <div>
+        <p class="font-semibold text-sm mb-1" style="color:var(--accent)">Nota clínica</p>
+        <p class="text-xs leading-relaxed" style="color:var(--text-secondary)">El IMC es un indicador orientativo y no sustituye a la evaluación médica individualizada. Si tienes dudas sobre tu peso o composición corporal, consulta siempre con tu médico o nutricionista colegiado.</p>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="section-divider"></div>
+<!-- ======= FAQ ======= -->
+<section id="faq" class="py-16 md:py-24" style="background:var(--surface)">
+  <div class="max-w-3xl mx-auto px-4 sm:px-6">
+    <div class="mb-12 reveal">
+      <p class="section-label mb-3">Preguntas frecuentes</p>
+      <h2 class="text-3xl font-bold tracking-tight mb-4" style="color:var(--text-primary);letter-spacing:-0.025em">Todo sobre el IMC</h2>
+      <p class="text-sm" style="color:var(--text-secondary)">Respuestas basadas en evidencia científica a las preguntas más habituales sobre el IMC, el peso ideal y la salud corporal.</p>
+    </div>
+    <div class="rounded-xl overflow-hidden" style="border:1px solid var(--border);background:var(--surface)" id="faqContainer"></div>
+  </div>
+</section>
+<div class="section-divider"></div>
+<!-- ======= CTA ======= -->
+<section id="cta-section" class="py-16 md:py-20 no-print" style="background:#0f172a">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 text-center">
+    <div class="reveal">
+      <p class="text-xs font-semibold uppercase tracking-widest mb-4" style="color:#3b82f6">Herramienta gratuita · Sin registro</p>
+      <h2 class="text-2xl sm:text-3xl font-bold mb-4 tracking-tight" style="color:#f0f6fc;letter-spacing:-0.025em">Conoce tu punto de partida</h2>
+      <p class="text-base mb-8 max-w-md mx-auto leading-relaxed" style="color:#6e7681">Tu salud empieza con información fiable. Calcula tu IMC en 10 segundos y comparte los resultados con quien quieras.</p>
+      <div class="flex flex-col sm:flex-row gap-3 justify-center">
+        <a href="#calculadora" class="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg text-sm font-semibold tracking-tight transition-all" style="background:#2563eb;color:#fff" onmouseover="this.style.background=\'#1d4ed8\'" onmouseout="this.style.background=\'#2563eb\'">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>
+          Calcular mi IMC gratis
+        </a>
+        <button onclick="copyLink()" class="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg text-sm font-semibold transition-all" style="background:rgba(255,255,255,0.08);color:#f0f6fc;border:1px solid rgba(255,255,255,0.12)" onmouseover="this.style.background=\'rgba(255,255,255,0.12)\'" onmouseout="this.style.background=\'rgba(255,255,255,0.08)\'">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"/></svg>
+          Copiar enlace
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- ======= FOOTER ======= -->
+<footer style="background:var(--surface);border-top:1px solid var(--border)">
+  <div class="max-w-5xl mx-auto px-4 sm:px-6 py-10">
+    <div class="flex flex-col md:flex-row gap-8 justify-between mb-8">
+      <div class="max-w-xs">
+        <div class="flex items-center gap-2.5 mb-3">
+          <svg width="22" height="22" viewBox="0 0 28 28" fill="none" aria-hidden="true">
+            <rect width="28" height="28" rx="7" fill="#2563EB"/>
+            <circle cx="14" cy="10" r="3.5" stroke="white" stroke-width="1.8" fill="none"/>
+            <path d="M7 21.5c0-3.87 3.13-7 7-7s7 3.13 7 7" stroke="white" stroke-width="1.8" stroke-linecap="round" fill="none"/>
+          </svg>
+          <span class="font-semibold text-sm" style="color:var(--text-primary)">IMC Calculadora</span>
+        </div>
+        <p class="text-xs leading-relaxed" style="color:var(--text-muted)">Herramienta informativa gratuita basada en los criterios oficiales de la Organización Mundial de la Salud (OMS). Solo para adultos ≥ 18 años. No sustituye la consulta médica.</p>
+      </div>
+      <div class="flex gap-12">
+        <div>
+          <p class="text-xs font-semibold uppercase tracking-wider mb-3" style="color:var(--text-primary)">Secciones</p>
+          <ul class="space-y-2 text-xs" style="color:var(--text-muted)">
+            <li><a href="#calculadora"  class="hover:underline transition-colors" style="color:var(--text-muted)">Calculadora</a></li>
+            <li><a href="#que-es-imc"   class="hover:underline transition-colors" style="color:var(--text-muted)">Qué es el IMC</a></li>
+            <li><a href="#tabla-imc"    class="hover:underline transition-colors" style="color:var(--text-muted)">Tabla IMC</a></li>
+            <li><a href="#limitaciones" class="hover:underline transition-colors" style="color:var(--text-muted)">Limitaciones</a></li>
+            <li><a href="#faq"          class="hover:underline transition-colors" style="color:var(--text-muted)">FAQ</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="text-xs font-semibold uppercase tracking-wider mb-3" style="color:var(--text-primary)">Legal</p>
+          <ul class="space-y-2 text-xs">
+            <li><a href="#" class="hover:underline" style="color:var(--text-muted)">Privacidad</a></li>
+            <li><a href="#" class="hover:underline" style="color:var(--text-muted)">Términos</a></li>
+            <li><a href="#" class="hover:underline" style="color:var(--text-muted)">Contacto</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="pt-6 flex flex-col sm:flex-row items-center justify-between gap-2 text-xs" style="border-top:1px solid var(--border);color:var(--text-muted)">
+      <p>© 2025 IMC Calculadora. Todos los derechos reservados.</p>
+      <p>Solo orientativo · Criterios OMS · España</p>
+    </div>
+  </div>
+</footer>
+<!-- Mobile sticky CTA -->
+<div id="mobileCTA" class="hidden md:hidden no-print">
+  <a href="#calculadora" class="btn-primary">
+    Calcular mi IMC
+    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/></svg>
+  </a>
+</div>
+<!-- Toast -->
+<div id="toast">
+  <svg class="w-4 h-4 shrink-0" style="color:#4ade80" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+  Enlace copiado
+</div>
+<!-- JS — orden de carga garantizado: sin defer para evitar race conditions -->
+<script src="data/faqs.js"></script>
+<script src="js/theme.js"></script>
+<script src="js/gauge.js"></script>
+<script src="js/chart.js"></script>
+<script src="js/share.js"></script>
+<script src="js/units.js"></script>
+<script src="js/storage.js"></script>
+<script src="js/calculator.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/faq.js"></script>
+</body>
+</html>
