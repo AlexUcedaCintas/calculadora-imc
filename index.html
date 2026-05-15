@@ -88,7 +88,9 @@
   </script>
 </head>
 <body class="antialiased">
+<a href="#main-content" class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:rounded-lg focus:text-sm focus:font-semibold" style="background:var(--accent);color:#fff" data-en="Skip to main content">Saltar al contenido principal</a>
 <!-- ======= NAVBAR ======= -->
+
 <header class="navbar">
   <div class="max-w-6xl mx-auto px-4 sm:px-6 flex items-center gap-3 h-full">
     <a href="./" class="flex items-center gap-2 shrink-0" aria-label="Inicio">
@@ -98,25 +100,26 @@
         <path d="M7 21.5c0-3.87 3.13-7 7-7s7 3.13 7 7" stroke="white" stroke-width="1.8" stroke-linecap="round" fill="none"/>
         <path d="M14 17v4M12 21h4" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
       </svg>
-      <span class="font-semibold text-sm tracking-tight hidden sm:inline" style="color:var(--text-primary)">IMC <span style="color:var(--accent)">Calculadora</span></span>
+      <span class="font-semibold text-sm tracking-tight hidden sm:inline" style="color:var(--text-primary)" data-en="BMI <span style=&quot;color:var(--accent)&quot;>Calculator</span>">IMC <span style="color:var(--accent)">Calculadora</span></span>
     </a>
     <nav class="calc-nav" aria-label="Calculadoras">
-      <a href="./"                   class="calc-nav-link active">IMC</a>
-      <a href="./peso-ideal/"        class="calc-nav-link">Peso ideal</a>
-      <a href="./calorias-diarias/"  class="calc-nav-link">Calorías</a>
-      <a href="./calorias-quemadas/" class="calc-nav-link">Cal. Quemadas</a>
-      <a href="./tmb/"               class="calc-nav-link">TMB</a>
+      <a href="./"                   class="calc-nav-link active" data-en="BMI">IMC</a>
+      <a href="./peso-ideal/"        class="calc-nav-link" data-en="Ideal Weight">Peso ideal</a>
+      <a href="./calorias-diarias/"  class="calc-nav-link" data-en="Calories">Calorías</a>
+      <a href="./calorias-quemadas/" class="calc-nav-link" data-en="Calories Burned">Cal. Quemadas</a>
       <a href="./macros/"            class="calc-nav-link">Macros</a>
       <a href="./ffmi/"              class="calc-nav-link">FFMI</a>
-      <a href="./grasa-corporal/"    class="calc-nav-link">% Grasa</a>
-      <a href="./agua-diaria/"       class="calc-nav-link">Agua</a>
+      <a href="./grasa-corporal/"    class="calc-nav-link" data-en="Body Fat">% Grasa</a>
+      <a href="./agua-diaria/"       class="calc-nav-link" data-en="Water">Agua</a>
     </nav>
+    <button class="lang-btn shrink-0" onclick="toggleLang()" aria-label="Switch to English">EN</button>
     <button id="darkToggle" class="theme-toggle shrink-0" aria-label="Cambiar modo oscuro">
       <svg id="iconLight" class="w-4 h-4 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><path stroke-linecap="round" d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
       <svg id="iconDark"  class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/></svg>
     </button>
   </div>
 </header>
+<main id="main-content">
 <!-- ======= HERO + PANEL INTEGRADO ======= -->
 <section id="hero" class="hero-section">
   <div class="max-w-6xl mx-auto px-4 sm:px-6 w-full py-10 lg:py-14">
@@ -125,19 +128,19 @@
     <div class="text-center mb-8 lg:mb-10">
       <div class="trust-badge inline-flex mb-5">
         <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
-        Basado en criterios OMS · Actualizado 2026
+        <span class="lang-es">Basado en criterios OMS · Actualizado 2026</span><span class="lang-en">Based on WHO criteria · Updated 2026</span>
       </div>
       <h1 class="text-4xl sm:text-5xl font-bold tracking-tight mb-4" style="color:var(--text-primary);letter-spacing:-0.03em">
-        Calculadora de <span style="color:var(--accent)">IMC</span> — Índice de Masa Corporal
+        <span class="lang-es">Calculadora de <span style="color:var(--accent)">IMC</span> — Índice de Masa Corporal</span><span class="lang-en"><span style="color:var(--accent)">BMI</span> Calculator — Body Mass Index</span>
       </h1>
       <p class="text-base max-w-xl mx-auto leading-relaxed mb-6" style="color:var(--text-secondary)">
-        Descubre tu <strong style="color:var(--text-primary)">Índice de Masa Corporal</strong> y si tu peso es saludable según los criterios de la <strong style="color:var(--text-primary)">Organización Mundial de la Salud</strong>. Gratis, sin registro.
+        <span class="lang-es">Descubre tu <strong style="color:var(--text-primary)">Índice de Masa Corporal</strong> y si tu peso es saludable según los criterios de la <strong style="color:var(--text-primary)">Organización Mundial de la Salud</strong>. Gratis, sin registro.</span><span class="lang-en">Discover your <strong style="color:var(--text-primary)">Body Mass Index</strong> and whether your weight is healthy according to <strong style="color:var(--text-primary)">World Health Organization</strong> criteria. Free, no registration.</span>
       </p>
       <div class="flex items-center justify-center flex-wrap gap-2" style="color:var(--text-muted)">
-        <span class="feature-pill">Resultado inmediato</span>
+        <span class="feature-pill" data-en="Instant result">Resultado inmediato</span>
         <span class="feature-pill">kg/cm · lb/in</span>
-        <span class="feature-pill">100% privado</span>
-        <span class="feature-pill">Tabla OMS completa</span>
+        <span class="feature-pill" data-en="100% private">100% privado</span>
+        <span class="feature-pill" data-en="Full WHO table">Tabla OMS completa</span>
       </div>
     </div>
 
@@ -149,33 +152,25 @@
         <div class="calc-inputs-bar">
           <!-- Altura -->
           <div class="cib-field">
-            <label class="cib-label" for="height">Altura <span id="heightUnit" class="cib-unit">(cm)</span></label>
+            <label class="cib-label" for="height"><span data-en="Height">Altura</span> <span id="heightUnit" class="cib-unit">(cm)</span></label>
             <input id="height" class="cib-input" type="number" min="50" max="300" step="0.1" placeholder="175" value="175"
               autocomplete="off" inputmode="decimal" aria-label="Altura"/>
-            <p id="heightError" class="cib-error hidden">Valor no válido</p>
+            <p id="heightError" class="cib-error hidden" data-en="Invalid value"></p>Valor no válido</p>
           </div>
           <!-- Divisor -->
           <div class="cib-divider" aria-hidden="true"></div>
           <!-- Peso -->
           <div class="cib-field">
-            <label class="cib-label" for="weight">Peso <span id="weightUnit" class="cib-unit">(kg)</span></label>
+            <label class="cib-label" for="weight"><span data-en="Weight">Peso</span> <span id="weightUnit" class="cib-unit">(kg)</span></label>
             <input id="weight" class="cib-input" type="number" min="1" max="500" step="0.1" placeholder="70" value="78"
               autocomplete="off" inputmode="decimal" aria-label="Peso"/>
-            <p id="weightError" class="cib-error hidden">Valor no válido</p>
-          </div>
-          <!-- Divisor -->
-          <div class="cib-divider" aria-hidden="true"></div>
-          <!-- Edad -->
-          <div class="cib-field cib-field--sm">
-            <label class="cib-label" for="age">Edad <span class="cib-unit">(opt.)</span></label>
-            <input id="age" class="cib-input" type="number" min="2" max="120" step="1" placeholder="30" value="30"
-              autocomplete="off" inputmode="numeric" aria-label="Edad"/>
+            <p id="weightError" class="cib-error hidden" data-en="Invalid value"></p>Valor no válido</p>
           </div>
           <!-- Divisor -->
           <div class="cib-divider" aria-hidden="true"></div>
           <!-- Sexo -->
           <div class="cib-field cib-field--gender">
-            <label class="cib-label">Sexo biológico</label>
+            <label class="cib-label" data-en="Biological sex">Sexo biológico</label>
             <div class="cib-gender">
               <div class="gender-option selected" id="gMale" onclick="setGender('male')" role="radio" aria-checked="true" tabindex="0">
                 <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="10" cy="10" r="6" stroke-width="2"/><path d="M14.5 5.5L19 1M19 1h-4M19 1v4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
@@ -186,13 +181,7 @@
                 Mujer
               </div>
             </div>
-          </div>
-          <!-- Botón -->
-          <button id="calcBtn" class="cib-btn">
-            Calcular
-            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M13 7l5 5m0 0l-5 5m5-5H6"/></svg>
-          </button>
-        </div>
+          </div>        </div>
         <!-- Subrow: unidades + trust -->
         <div class="calc-subrow">
           <div class="unit-toggle">
@@ -201,11 +190,11 @@
           </div>
           <div class="cp-trust">
             <svg class="w-3 h-3" style="color:#4ade80" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
-            <span>100% privado</span>
+            <span data-en="100% private" data-en="100% private">100% privado</span>
             <span class="cp-trust-dot">·</span>
-            <span>Sin registro</span>
+            <span data-en="No registration">Sin registro</span>
             <span class="cp-trust-dot">·</span>
-            <span>Criterios OMS</span>
+            <span data-en="WHO criteria">Criterios OMS</span>
           </div>
         </div>
       </div>
@@ -225,8 +214,8 @@
             </svg>
           </div>
           <div class="rp-score">—</div>
-          <p class="rp-label">Introduce tus datos y pulsa <strong>Calcular</strong></p>
-          <p class="rp-desc">Obtendrás tu categoría OMS, peso saludable, barra de escala y recomendaciones según tu sexo.</p>
+          <p class="rp-label" data-en="Enter your data to see the result">Introduce tus datos para ver el resultado</p>
+          <p class="rp-desc" data-en="You will get your WHO category, healthy weight, scale bar and recommendations based on your sex.">Obtendrás tu categoría OMS, peso saludable, barra de escala y recomendaciones según tu sexo.</p>
         </div>
 
         <!-- Resultado completo -->
@@ -256,11 +245,11 @@
               <div id="bmiCategory" class="res-category">—</div>
               <div id="bmiCategoryDesc" class="res-category-desc">—</div>
               <div class="res-actions no-print">
-                <button onclick="copyLink()" class="btn-ghost">
+                <button onclick="copyLink()" class="btn-ghost" data-en='<svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"/></svg> Share'>
                   <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"/></svg>
                   Compartir
                 </button>
-                <button onclick="window.print()" class="btn-ghost">
+                <button onclick="window.print()" class="btn-ghost" data-en='<svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"/></svg> Print'>
                   <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"/></svg>
                   Imprimir
                 </button>
@@ -272,17 +261,17 @@
                 <p id="resultMessage" class="res-card-msg"></p>
                 <div class="res-card-metrics">
                   <div>
-                    <p class="res-metric-label">Peso saludable</p>
+                    <p class="res-metric-label" data-en="Healthy weight">Peso saludable</p>
                     <p id="healthyRange" class="res-metric-value"></p>
                   </div>
                   <div>
-                    <p class="res-metric-label">Objetivo</p>
+                    <p class="res-metric-label" data-en="Goal">Objetivo</p>
                     <p id="goalSuggestion" class="res-metric-goal"></p>
                   </div>
                 </div>
               </div>
               <div class="res-rangebar">
-                <p class="res-rangebar-label">Escala IMC</p>
+                <p class="res-rangebar-label" data-en="BMI Scale">Escala IMC</p>
                 <div class="range-bar-wrap">
                   <div class="h-full flex rounded-full overflow-hidden">
                     <div style="width:15%;background:#93c5fd" title="Bajo peso"></div>
@@ -316,23 +305,24 @@
 <section id="que-es-imc" class="py-16 md:py-24" style="background:var(--surface)">
   <div class="max-w-5xl mx-auto px-4 sm:px-6">
     <div class="max-w-xl mb-12 reveal">
-      <p class="section-label mb-3">Guía clínica</p>
-      <h2 class="text-3xl font-bold tracking-tight mb-4" style="color:var(--text-primary);letter-spacing:-0.025em">¿Qué es el Índice de Masa Corporal?</h2>
-      <p class="text-base leading-relaxed" style="color:var(--text-secondary)">El <strong style="color:var(--text-primary)">Índice de Masa Corporal (IMC)</strong> —también conocido como BMI en inglés— es el indicador de referencia internacional para evaluar el peso corporal en relación con la estatura, adoptado por la OMS como estándar de salud pública mundial.</p>
+      <p class="section-label mb-3" data-en="Clinical Guide">Guía clínica</p>
+      <h2 class="text-3xl font-bold tracking-tight mb-4" style="color:var(--text-primary);letter-spacing:-0.025em" data-en="What is the Body Mass Index?">¿Qué es el Índice de Masa Corporal?</h2>
+      <p class="text-base leading-relaxed lang-es" style="color:var(--text-secondary)">El <strong style="color:var(--text-primary)">Índice de Masa Corporal (IMC)</strong> —también conocido como BMI en inglés— es el indicador de referencia internacional para evaluar el peso corporal en relación con la estatura, adoptado por la OMS como estándar de salud pública mundial.</p>
+      <p class="text-base leading-relaxed lang-en" style="color:var(--text-secondary)">The <strong style="color:var(--text-primary)">Body Mass Index (BMI)</strong> is the international reference indicator for assessing body weight relative to height, adopted by the WHO as the world public health standard.</p>
     </div>
     <div class="grid md:grid-cols-3 gap-5">
       <div class="card card-hover reveal">
         <div class="w-9 h-9 rounded-lg flex items-center justify-center mb-4" style="background:var(--accent-light)">
           <svg class="w-5 h-5" style="color:var(--accent)" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
         </div>
-        <h3 class="font-semibold text-sm mb-2" style="color:var(--text-primary)">Definición</h3>
+        <h3 class="font-semibold text-sm mb-2" style="color:var(--text-primary)" data-en="Definition">Definición</h3>
         <p class="text-sm leading-relaxed" style="color:var(--text-secondary)">Desarrollado por Adolphe Quetelet en el siglo XIX, el IMC estima la grasa corporal a partir del peso y la altura. La OMS lo adoptó como herramienta estándar de cribado en salud pública.</p>
       </div>
       <div class="card card-hover reveal" style="transition-delay:0.08s">
         <div class="w-9 h-9 rounded-lg flex items-center justify-center mb-4" style="background:var(--accent-light)">
           <svg class="w-5 h-5" style="color:var(--accent)" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4"/></svg>
         </div>
-        <h3 class="font-semibold text-sm mb-3" style="color:var(--text-primary)">Fórmula de cálculo</h3>
+        <h3 class="font-semibold text-sm mb-3" style="color:var(--text-primary)" data-en="Calculation Formula">Fórmula de cálculo</h3>
         <div class="rounded-lg p-4 text-center mb-3" style="background:var(--surface-2);border:1px solid var(--border)">
           <p class="text-xs font-medium mb-1" style="color:var(--text-muted)">IMC =</p>
           <p class="text-base font-bold" style="color:var(--accent)">peso (kg)</p>
@@ -345,7 +335,7 @@
         <div class="w-9 h-9 rounded-lg flex items-center justify-center mb-4" style="background:var(--accent-light)">
           <svg class="w-5 h-5" style="color:var(--accent)" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
         </div>
-        <h3 class="font-semibold text-sm mb-2" style="color:var(--text-primary)">Utilidad clínica</h3>
+        <h3 class="font-semibold text-sm mb-2" style="color:var(--text-primary)" data-en="Clinical Utility">Utilidad clínica</h3>
         <p class="text-sm leading-relaxed" style="color:var(--text-secondary)">Herramienta de cribado para identificar categorías de peso asociadas a mayor riesgo de enfermedades cardiovasculares, diabetes tipo 2 y otras patologías metabólicas crónicas.</p>
       </div>
     </div>
@@ -356,63 +346,63 @@
 <section id="tabla-imc" class="py-16 md:py-24" style="background:var(--surface-2)">
   <div class="max-w-5xl mx-auto px-4 sm:px-6">
     <div class="max-w-xl mb-10 reveal">
-      <p class="section-label mb-3">Clasificación OMS</p>
-      <h2 class="text-3xl font-bold tracking-tight mb-3" style="color:var(--text-primary);letter-spacing:-0.025em">Tabla IMC por Categorías</h2>
-      <p class="text-sm" style="color:var(--text-secondary)">Clasificación oficial de la OMS válida para adultos de 18 años en adelante. Incluye rango de IMC, nivel de riesgo y estado de salud asociado.</p>
+      <p class="section-label mb-3" data-en="WHO Classification">Clasificación OMS</p>
+      <h2 class="text-3xl font-bold tracking-tight mb-3" style="color:var(--text-primary);letter-spacing:-0.025em" data-en="BMI Categories Table">Tabla IMC por Categorías</h2>
+      <p class="text-sm" style="color:var(--text-secondary)" data-en="Official WHO classification valid for adults aged 18 and over. Includes BMI range, risk level and associated health status.">Clasificación oficial de la OMS válida para adultos de 18 años en adelante. Incluye rango de IMC, nivel de riesgo y estado de salud asociado.</p>
     </div>
     <div class="reveal rounded-xl overflow-hidden" style="border:1px solid var(--border);background:var(--surface)">
       <div class="overflow-x-auto">
         <table class="w-full text-sm" aria-label="Tabla de clasificación IMC según la OMS">
           <thead>
             <tr style="background:var(--surface-2);border-bottom:1px solid var(--border)">
-              <th class="text-left py-3 px-5 font-semibold text-xs uppercase tracking-wider" style="color:var(--text-muted)">Categoría</th>
-              <th class="text-center py-3 px-5 font-semibold text-xs uppercase tracking-wider" style="color:var(--text-muted)">IMC (kg/m²)</th>
-              <th class="text-center py-3 px-5 font-semibold text-xs uppercase tracking-wider" style="color:var(--text-muted)">Riesgo</th>
-              <th class="text-center py-3 px-5 font-semibold text-xs uppercase tracking-wider hidden sm:table-cell" style="color:var(--text-muted)">Estado</th>
+              <th class="text-left py-3 px-5 font-semibold text-xs uppercase tracking-wider" style="color:var(--text-muted)" data-en="Category">Categoría</th>
+              <th class="text-center py-3 px-5 font-semibold text-xs uppercase tracking-wider" style="color:var(--text-muted)" data-en="BMI (kg/m²)">IMC (kg/m²)</th>
+              <th class="text-center py-3 px-5 font-semibold text-xs uppercase tracking-wider" style="color:var(--text-muted)" data-en="Risk">Riesgo</th>
+              <th class="text-center py-3 px-5 font-semibold text-xs uppercase tracking-wider hidden sm:table-cell" style="color:var(--text-muted)" data-en="Status">Estado</th>
             </tr>
           </thead>
           <tbody style="border-collapse:collapse">
             <tr style="border-bottom:1px solid var(--border)">
-              <td class="py-3.5 px-5 font-medium" style="color:#2563eb"><span class="inline-flex items-center gap-2"><span class="w-2 h-2 rounded-full inline-block" style="background:#93c5fd"></span>Bajo peso</span></td>
+              <td class="py-3.5 px-5 font-medium cat-underweight" data-en='<span class="inline-flex items-center gap-2"><span class="w-2 h-2 rounded-full inline-block" style="background:#93c5fd"></span>Underweight</span>'><span class="inline-flex items-center gap-2"><span class="w-2 h-2 rounded-full inline-block" style="background:#93c5fd"></span>Bajo peso</span></td>
               <td class="py-3.5 px-5 text-center font-mono text-xs" style="color:var(--text-secondary)">&lt; 18,5</td>
-              <td class="py-3.5 px-5 text-center text-xs" style="color:var(--text-secondary)">Moderado</td>
-              <td class="py-3.5 px-5 text-center hidden sm:table-cell"><span class="text-xs font-medium px-2 py-0.5 rounded-full" style="background:#eff6ff;color:#1d4ed8;border:1px solid #bfdbfe">Atención</span></td>
+              <td class="py-3.5 px-5 text-center text-xs" style="color:var(--text-secondary)" data-en="Moderate">Moderado</td>
+              <td class="py-3.5 px-5 text-center hidden sm:table-cell"><span class="badge-underweight text-xs font-medium px-2 py-0.5 rounded-full" style="background:#eff6ff;color:#1d4ed8;border:1px solid #bfdbfe" data-en="Attention">Atención</span></td>
             </tr>
             <tr style="border-bottom:1px solid var(--border);background:rgba(22,163,74,0.03)">
-              <td class="py-3.5 px-5 font-medium" style="color:#16a34a"><span class="inline-flex items-center gap-2"><span class="w-2 h-2 rounded-full inline-block" style="background:#4ade80"></span>Peso normal</span></td>
+              <td class="py-3.5 px-5 font-medium cat-normal" data-en='<span class="inline-flex items-center gap-2"><span class="w-2 h-2 rounded-full inline-block" style="background:#4ade80"></span>Normal weight</span>'><span class="inline-flex items-center gap-2"><span class="w-2 h-2 rounded-full inline-block" style="background:#4ade80"></span>Peso normal</span></td>
               <td class="py-3.5 px-5 text-center font-mono text-xs" style="color:var(--text-secondary)">18,5 – 24,9</td>
-              <td class="py-3.5 px-5 text-center text-xs" style="color:var(--text-secondary)">Bajo</td>
-              <td class="py-3.5 px-5 text-center hidden sm:table-cell"><span class="text-xs font-medium px-2 py-0.5 rounded-full" style="background:#f0fdf4;color:#15803d;border:1px solid #bbf7d0">Saludable</span></td>
+              <td class="py-3.5 px-5 text-center text-xs" style="color:var(--text-secondary)" data-en="Low">Bajo</td>
+              <td class="py-3.5 px-5 text-center hidden sm:table-cell"><span class="badge-normal text-xs font-medium px-2 py-0.5 rounded-full" style="background:#f0fdf4;color:#15803d;border:1px solid #bbf7d0" data-en="Healthy">Saludable</span></td>
             </tr>
             <tr style="border-bottom:1px solid var(--border)">
-              <td class="py-3.5 px-5 font-medium" style="color:#d97706"><span class="inline-flex items-center gap-2"><span class="w-2 h-2 rounded-full inline-block" style="background:#fcd34d"></span>Sobrepeso</span></td>
+              <td class="py-3.5 px-5 font-medium cat-overweight" data-en='<span class="inline-flex items-center gap-2"><span class="w-2 h-2 rounded-full inline-block" style="background:#fcd34d"></span>Overweight</span>'><span class="inline-flex items-center gap-2"><span class="w-2 h-2 rounded-full inline-block" style="background:#fcd34d"></span>Sobrepeso</span></td>
               <td class="py-3.5 px-5 text-center font-mono text-xs" style="color:var(--text-secondary)">25,0 – 29,9</td>
-              <td class="py-3.5 px-5 text-center text-xs" style="color:var(--text-secondary)">Aumentado</td>
-              <td class="py-3.5 px-5 text-center hidden sm:table-cell"><span class="text-xs font-medium px-2 py-0.5 rounded-full" style="background:#fffbeb;color:#b45309;border:1px solid #fde68a">Precaución</span></td>
+              <td class="py-3.5 px-5 text-center text-xs" style="color:var(--text-secondary)" data-en="Increased">Aumentado</td>
+              <td class="py-3.5 px-5 text-center hidden sm:table-cell"><span class="badge-overweight text-xs font-medium px-2 py-0.5 rounded-full" style="background:#fffbeb;color:#b45309;border:1px solid #fde68a" data-en="Caution">Precaución</span></td>
             </tr>
             <tr style="border-bottom:1px solid var(--border)">
-              <td class="py-3.5 px-5 font-medium" style="color:#ea580c"><span class="inline-flex items-center gap-2"><span class="w-2 h-2 rounded-full inline-block" style="background:#f97316"></span>Obesidad I</span></td>
+              <td class="py-3.5 px-5 font-medium cat-obese1" data-en='<span class="inline-flex items-center gap-2"><span class="w-2 h-2 rounded-full inline-block" style="background:#f97316"></span>Obesity I</span>'><span class="inline-flex items-center gap-2"><span class="w-2 h-2 rounded-full inline-block" style="background:#f97316"></span>Obesidad I</span></td>
               <td class="py-3.5 px-5 text-center font-mono text-xs" style="color:var(--text-secondary)">30,0 – 34,9</td>
-              <td class="py-3.5 px-5 text-center text-xs" style="color:var(--text-secondary)">Alto</td>
-              <td class="py-3.5 px-5 text-center hidden sm:table-cell"><span class="text-xs font-medium px-2 py-0.5 rounded-full" style="background:#fff7ed;color:#c2410c;border:1px solid #fed7aa">Alto</span></td>
+              <td class="py-3.5 px-5 text-center text-xs" style="color:var(--text-secondary)" data-en="High">Alto</td>
+              <td class="py-3.5 px-5 text-center hidden sm:table-cell"><span class="badge-obese1 text-xs font-medium px-2 py-0.5 rounded-full" style="background:#fff7ed;color:#c2410c;border:1px solid #fed7aa" data-en="High">Alto</span></td>
             </tr>
             <tr style="border-bottom:1px solid var(--border)">
-              <td class="py-3.5 px-5 font-medium" style="color:#dc2626"><span class="inline-flex items-center gap-2"><span class="w-2 h-2 rounded-full inline-block" style="background:#ef4444"></span>Obesidad II</span></td>
+              <td class="py-3.5 px-5 font-medium cat-obese2" data-en='<span class="inline-flex items-center gap-2"><span class="w-2 h-2 rounded-full inline-block" style="background:#ef4444"></span>Obesity II</span>'><span class="inline-flex items-center gap-2"><span class="w-2 h-2 rounded-full inline-block" style="background:#ef4444"></span>Obesidad II</span></td>
               <td class="py-3.5 px-5 text-center font-mono text-xs" style="color:var(--text-secondary)">35,0 – 39,9</td>
-              <td class="py-3.5 px-5 text-center text-xs" style="color:var(--text-secondary)">Muy alto</td>
-              <td class="py-3.5 px-5 text-center hidden sm:table-cell"><span class="text-xs font-medium px-2 py-0.5 rounded-full" style="background:#fef2f2;color:#991b1b;border:1px solid #fecaca">Muy alto</span></td>
+              <td class="py-3.5 px-5 text-center text-xs" style="color:var(--text-secondary)" data-en="Very high">Muy alto</td>
+              <td class="py-3.5 px-5 text-center hidden sm:table-cell"><span class="badge-obese2 text-xs font-medium px-2 py-0.5 rounded-full" style="background:#fef2f2;color:#991b1b;border:1px solid #fecaca" data-en="Very high">Muy alto</span></td>
             </tr>
             <tr>
-              <td class="py-3.5 px-5 font-medium" style="color:#9333ea"><span class="inline-flex items-center gap-2"><span class="w-2 h-2 rounded-full inline-block" style="background:#c084fc"></span>Obesidad III</span></td>
+              <td class="py-3.5 px-5 font-medium cat-obese3" data-en='<span class="inline-flex items-center gap-2"><span class="w-2 h-2 rounded-full inline-block" style="background:#c084fc"></span>Obesity III</span>'><span class="inline-flex items-center gap-2"><span class="w-2 h-2 rounded-full inline-block" style="background:#c084fc"></span>Obesidad III</span></td>
               <td class="py-3.5 px-5 text-center font-mono text-xs" style="color:var(--text-secondary)">≥ 40,0</td>
-              <td class="py-3.5 px-5 text-center text-xs" style="color:var(--text-secondary)">Extremo</td>
-              <td class="py-3.5 px-5 text-center hidden sm:table-cell"><span class="text-xs font-medium px-2 py-0.5 rounded-full" style="background:#faf5ff;color:#7e22ce;border:1px solid #e9d5ff">Crítico</span></td>
+              <td class="py-3.5 px-5 text-center text-xs" style="color:var(--text-secondary)" data-en="Extreme">Extremo</td>
+              <td class="py-3.5 px-5 text-center hidden sm:table-cell"><span class="badge-obese3 text-xs font-medium px-2 py-0.5 rounded-full" style="background:#faf5ff;color:#7e22ce;border:1px solid #e9d5ff" data-en="Critical">Crítico</span></td>
             </tr>
           </tbody>
         </table>
       </div>
       <div class="px-5 py-2.5 text-xs" style="background:var(--surface-2);border-top:1px solid var(--border);color:var(--text-muted)">
-        Fuente: Organización Mundial de la Salud (OMS/WHO) — Clasificación IMC para adultos ≥ 18 años. Los valores son los mismos para hombres y mujeres.
+        <span data-en="Source: World Health Organization (WHO/OMS) — BMI classification for adults ≥ 18 years. Values are the same for men and women.">Fuente: Organización Mundial de la Salud (OMS/WHO) — Clasificación IMC para adultos ≥ 18 años. Los valores son los mismos para hombres y mujeres.</span>
       </div>
     </div>
   </div>
@@ -422,9 +412,9 @@
 <section id="imc-sexo" class="py-16 md:py-24" style="background:var(--surface)">
   <div class="max-w-5xl mx-auto px-4 sm:px-6">
     <div class="max-w-xl mb-12 reveal">
-      <p class="section-label mb-3">Diferencias fisiológicas</p>
-      <h2 class="text-3xl font-bold tracking-tight mb-4" style="color:var(--text-primary);letter-spacing:-0.025em">IMC en hombres y mujeres</h2>
-      <p class="text-sm leading-relaxed" style="color:var(--text-secondary)">Los rangos OMS son idénticos para ambos sexos, pero la composición corporal y distribución de grasa presentan diferencias fisiológicas relevantes.</p>
+      <p class="section-label mb-3" data-en="Physiological differences">Diferencias fisiológicas</p>
+      <h2 class="text-3xl font-bold tracking-tight mb-4" style="color:var(--text-primary);letter-spacing:-0.025em" data-en="BMI in men and women">IMC en hombres y mujeres</h2>
+      <p class="text-sm leading-relaxed" style="color:var(--text-secondary)" data-en="WHO ranges are identical for both sexes, but body composition and fat distribution present relevant physiological differences.">Los rangos OMS son idénticos para ambos sexos, pero la composición corporal y distribución de grasa presentan diferencias fisiológicas relevantes.</p>
     </div>
     <div class="grid md:grid-cols-2 gap-5">
       <div class="card card-hover reveal">
@@ -433,14 +423,14 @@
             <svg class="w-5 h-5" style="color:var(--text-secondary)" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="10" cy="9" r="5" stroke-width="2"/><path d="M14 5l5-5M19 0h-4M19 0v4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </div>
           <div>
-            <h3 class="font-semibold text-base" style="color:var(--text-primary)">Hombres</h3>
-            <p class="text-xs" style="color:var(--text-muted)">IMC saludable: 18,5 – 24,9</p>
+            <h3 class="font-semibold text-base" style="color:var(--text-primary)" data-en="Men">Hombres</h3>
+            <p class="text-xs" style="color:var(--text-muted)" data-en="Healthy BMI: 18.5 – 24.9">IMC saludable: 18,5 – 24,9</p>
           </div>
         </div>
         <ul class="space-y-3 text-sm" style="color:var(--text-secondary)">
-          <li class="flex gap-3 leading-relaxed"><span class="mt-1.5 w-1.5 h-1.5 rounded-full shrink-0" style="background:var(--border-strong)"></span>Mayor proporción de masa muscular, lo que puede elevar el IMC sin indicar exceso de grasa.</li>
-          <li class="flex gap-3 leading-relaxed"><span class="mt-1.5 w-1.5 h-1.5 rounded-full shrink-0" style="background:var(--border-strong)"></span>Distribución adiposa preferentemente abdominal (patrón androide), con mayor riesgo cardiovascular asociado.</li>
-          <li class="flex gap-3 leading-relaxed"><span class="mt-1.5 w-1.5 h-1.5 rounded-full shrink-0" style="background:var(--border-strong)"></span>Porcentaje de grasa corporal saludable: 8–24%. En hombres muy musculados, complementar con bioimpedancia.</li>
+          <li class="flex gap-3 leading-relaxed" data-en='<span class="mt-1.5 w-1.5 h-1.5 rounded-full shrink-0" style="background:var(--border-strong)"></span>Higher proportion of muscle mass, which can raise BMI without indicating excess fat.'><span class="mt-1.5 w-1.5 h-1.5 rounded-full shrink-0" style="background:var(--border-strong)"></span>Mayor proporción de masa muscular, lo que puede elevar el IMC sin indicar exceso de grasa.</li>
+          <li class="flex gap-3 leading-relaxed" data-en='<span class="mt-1.5 w-1.5 h-1.5 rounded-full shrink-0" style="background:var(--border-strong)"></span>Predominantly abdominal fat distribution (android pattern), with greater associated cardiovascular risk.'><span class="mt-1.5 w-1.5 h-1.5 rounded-full shrink-0" style="background:var(--border-strong)"></span>Distribución adiposa preferentemente abdominal (patrón androide), con mayor riesgo cardiovascular asociado.</li>
+          <li class="flex gap-3 leading-relaxed" data-en='<span class="mt-1.5 w-1.5 h-1.5 rounded-full shrink-0" style="background:var(--border-strong)"></span>Healthy body fat percentage: 8–24%. In highly muscular men, complement with bioimpedance.'><span class="mt-1.5 w-1.5 h-1.5 rounded-full shrink-0" style="background:var(--border-strong)"></span>Porcentaje de grasa corporal saludable: 8–24%. En hombres muy musculados, complementar con bioimpedancia.</li>
         </ul>
       </div>
       <div class="card card-hover reveal" style="transition-delay:0.1s">
@@ -449,14 +439,14 @@
             <svg class="w-5 h-5" style="color:var(--text-secondary)" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="8" r="5" stroke-width="2"/><path d="M12 13v8M9.5 18.5h5" stroke-width="2" stroke-linecap="round"/></svg>
           </div>
           <div>
-            <h3 class="font-semibold text-base" style="color:var(--text-primary)">Mujeres</h3>
-            <p class="text-xs" style="color:var(--text-muted)">IMC saludable: 18,5 – 24,9</p>
+            <h3 class="font-semibold text-base" style="color:var(--text-primary)" data-en="Women">Mujeres</h3>
+            <p class="text-xs" style="color:var(--text-muted)" data-en="Healthy BMI: 18.5 – 24.9">IMC saludable: 18,5 – 24,9</p>
           </div>
         </div>
         <ul class="space-y-3 text-sm" style="color:var(--text-secondary)">
-          <li class="flex gap-3 leading-relaxed"><span class="mt-1.5 w-1.5 h-1.5 rounded-full shrink-0" style="background:var(--border-strong)"></span>Mayor porcentaje de grasa corporal de forma fisiológica (20–35% saludable), imprescindible para funciones hormonales y reproductivas.</li>
-          <li class="flex gap-3 leading-relaxed"><span class="mt-1.5 w-1.5 h-1.5 rounded-full shrink-0" style="background:var(--border-strong)"></span>Distribución periférica (caderas, muslos) con menor riesgo cardiovascular que el patrón abdominal.</li>
-          <li class="flex gap-3 leading-relaxed"><span class="mt-1.5 w-1.5 h-1.5 rounded-full shrink-0" style="background:var(--border-strong)"></span>Tras la menopausia la grasa se redistribuye hacia el abdomen, incrementando el riesgo metabólico aunque el IMC sea aparentemente normal.</li>
+          <li class="flex gap-3 leading-relaxed" data-en='<span class="mt-1.5 w-1.5 h-1.5 rounded-full shrink-0" style="background:var(--border-strong)"></span>Higher body fat percentage physiologically (20–35% healthy), essential for hormonal and reproductive functions.'><span class="mt-1.5 w-1.5 h-1.5 rounded-full shrink-0" style="background:var(--border-strong)"></span>Mayor porcentaje de grasa corporal de forma fisiológica (20–35% saludable), imprescindible para funciones hormonales y reproductivas.</li>
+          <li class="flex gap-3 leading-relaxed" data-en='<span class="mt-1.5 w-1.5 h-1.5 rounded-full shrink-0" style="background:var(--border-strong)"></span>Peripheral distribution (hips, thighs) with lower cardiovascular risk than the abdominal pattern.'><span class="mt-1.5 w-1.5 h-1.5 rounded-full shrink-0" style="background:var(--border-strong)"></span>Distribución periférica (caderas, muslos) con menor riesgo cardiovascular que el patrón abdominal.</li>
+          <li class="flex gap-3 leading-relaxed" data-en='<span class="mt-1.5 w-1.5 h-1.5 rounded-full shrink-0" style="background:var(--border-strong)"></span>After menopause, fat redistributes towards the abdomen, increasing metabolic risk even when BMI appears normal.'><span class="mt-1.5 w-1.5 h-1.5 rounded-full shrink-0" style="background:var(--border-strong)"></span>Tras la menopausia la grasa se redistribuye hacia el abdomen, incrementando el riesgo metabólico aunque el IMC sea aparentemente normal.</li>
         </ul>
       </div>
     </div>
@@ -467,40 +457,40 @@
 <section id="limitaciones" class="py-16 md:py-24" style="background:var(--surface-2)">
   <div class="max-w-5xl mx-auto px-4 sm:px-6">
     <div class="max-w-xl mb-12 reveal">
-      <p class="section-label mb-3">Contexto clínico</p>
-      <h2 class="text-3xl font-bold tracking-tight mb-4" style="color:var(--text-primary);letter-spacing:-0.025em">Limitaciones del IMC</h2>
-      <p class="text-sm leading-relaxed" style="color:var(--text-secondary)">El IMC es una herramienta de cribado poblacional, no un diagnóstico individual. Interpreta los resultados en su contexto adecuado.</p>
+      <p class="section-label mb-3" data-en="Clinical context">Contexto clínico</p>
+      <h2 class="text-3xl font-bold tracking-tight mb-4" style="color:var(--text-primary);letter-spacing:-0.025em" data-en="BMI Limitations">Limitaciones del IMC</h2>
+      <p class="text-sm leading-relaxed" style="color:var(--text-secondary)" data-en="BMI is a population screening tool, not an individual diagnosis. Interpret results in their appropriate context.">El IMC es una herramienta de cribado poblacional, no un diagnóstico individual. Interpreta los resultados en su contexto adecuado.</p>
     </div>
     <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-6">
       <div class="card card-hover reveal">
         <p class="text-xs font-bold uppercase tracking-widest mb-2" style="color:var(--text-muted)">01</p>
-        <h3 class="font-semibold text-sm mb-2" style="color:var(--text-primary)">No mide grasa directamente</h3>
-        <p class="text-xs leading-relaxed" style="color:var(--text-secondary)">El IMC no distingue entre tejido muscular y adiposo. Refleja la relación peso/altura, pero no la composición corporal real.</p>
+        <h3 class="font-semibold text-sm mb-2" style="color:var(--text-primary)" data-en="Does not measure fat directly">No mide grasa directamente</h3>
+        <p class="text-xs leading-relaxed" style="color:var(--text-secondary)" data-en="BMI does not distinguish between muscle and fat tissue. It reflects the weight/height ratio, but not actual body composition.">El IMC no distingue entre tejido muscular y adiposo. Refleja la relación peso/altura, pero no la composición corporal real.</p>
       </div>
       <div class="card card-hover reveal" style="transition-delay:0.05s">
         <p class="text-xs font-bold uppercase tracking-widest mb-2" style="color:var(--text-muted)">02</p>
-        <h3 class="font-semibold text-sm mb-2" style="color:var(--text-primary)">Deportistas y atletas</h3>
-        <p class="text-xs leading-relaxed" style="color:var(--text-secondary)">La alta masa muscular eleva el IMC sin exceso de grasa. Para deportistas se recomienda bioimpedancia o pliegues cutáneos.</p>
+        <h3 class="font-semibold text-sm mb-2" style="color:var(--text-primary)" data-en="Athletes and sportspeople">Deportistas y atletas</h3>
+        <p class="text-xs leading-relaxed" style="color:var(--text-secondary)" data-en="High muscle mass raises BMI without excess fat. For athletes, bioimpedance or skinfold measurements are recommended.">La alta masa muscular eleva el IMC sin exceso de grasa. Para deportistas se recomienda bioimpedancia o pliegues cutáneos.</p>
       </div>
       <div class="card card-hover reveal" style="transition-delay:0.1s">
         <p class="text-xs font-bold uppercase tracking-widest mb-2" style="color:var(--text-muted)">03</p>
-        <h3 class="font-semibold text-sm mb-2" style="color:var(--text-primary)">Edad y composición</h3>
-        <p class="text-xs leading-relaxed" style="color:var(--text-secondary)">Con el envejecimiento se pierde masa muscular y se acumula grasa. El IMC puede parecer normal con composición corporal desfavorable.</p>
+        <h3 class="font-semibold text-sm mb-2" style="color:var(--text-primary)" data-en="Age and composition">Edad y composición</h3>
+        <p class="text-xs leading-relaxed" style="color:var(--text-secondary)" data-en="With ageing, muscle mass is lost and fat accumulates. BMI may appear normal with an unfavourable body composition.">Con el envejecimiento se pierde masa muscular y se acumula grasa. El IMC puede parecer normal con composición corporal desfavorable.</p>
       </div>
       <div class="card card-hover reveal" style="transition-delay:0.15s">
         <p class="text-xs font-bold uppercase tracking-widest mb-2" style="color:var(--text-muted)">04</p>
-        <h3 class="font-semibold text-sm mb-2" style="color:var(--text-primary)">Grasa visceral abdominal</h3>
-        <p class="text-xs leading-relaxed" style="color:var(--text-secondary)">La grasa intraabdominal es el mayor predictor de riesgo cardiovascular. El perímetro de cintura complementa al IMC en esta evaluación.</p>
+        <h3 class="font-semibold text-sm mb-2" style="color:var(--text-primary)" data-en="Visceral abdominal fat">Grasa visceral abdominal</h3>
+        <p class="text-xs leading-relaxed" style="color:var(--text-secondary)" data-en="Intra-abdominal fat is the strongest predictor of cardiovascular risk. Waist circumference complements BMI in this assessment.">La grasa intraabdominal es el mayor predictor de riesgo cardiovascular. El perímetro de cintura complementa al IMC en esta evaluación.</p>
       </div>
       <div class="card card-hover reveal" style="transition-delay:0.2s">
         <p class="text-xs font-bold uppercase tracking-widest mb-2" style="color:var(--text-muted)">05</p>
-        <h3 class="font-semibold text-sm mb-2" style="color:var(--text-primary)">Variabilidad étnica</h3>
-        <p class="text-xs leading-relaxed" style="color:var(--text-secondary)">Para población asiática el riesgo comienza con IMC ≥23 (sobrepeso) y ≥27,5 (obesidad), según recomendaciones específicas de la OMS.</p>
+        <h3 class="font-semibold text-sm mb-2" style="color:var(--text-primary)" data-en="Ethnic variability">Variabilidad étnica</h3>
+        <p class="text-xs leading-relaxed" style="color:var(--text-secondary)" data-en="For Asian populations, risk begins at BMI ≥23 (overweight) and ≥27.5 (obesity), per specific WHO recommendations.">Para población asiática el riesgo comienza con IMC ≥23 (sobrepeso) y ≥27,5 (obesidad), según recomendaciones específicas de la OMS.</p>
       </div>
       <div class="card card-hover reveal" style="transition-delay:0.25s">
         <p class="text-xs font-bold uppercase tracking-widest mb-2" style="color:var(--text-muted)">06</p>
-        <h3 class="font-semibold text-sm mb-2" style="color:var(--text-primary)">Solo para adultos</h3>
-        <p class="text-xs leading-relaxed" style="color:var(--text-secondary)">En menores de 18 años se utilizan percentiles ajustados por edad y sexo. Esta herramienta está diseñada exclusivamente para adultos.</p>
+        <h3 class="font-semibold text-sm mb-2" style="color:var(--text-primary)" data-en="Adults only">Solo para adultos</h3>
+        <p class="text-xs leading-relaxed" style="color:var(--text-secondary)" data-en="For those under 18, age- and sex-adjusted percentiles are used. This tool is designed exclusively for adults.">En menores de 18 años se utilizan percentiles ajustados por edad y sexo. Esta herramienta está diseñada exclusivamente para adultos.</p>
       </div>
     </div>
     <div class="reveal rounded-xl p-5 flex gap-4" style="background:var(--accent-light);border:1px solid var(--accent-muted)">
@@ -508,8 +498,8 @@
         <svg class="w-4 h-4" style="color:var(--accent)" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
       </div>
       <div>
-        <p class="font-semibold text-sm mb-1" style="color:var(--accent)">Nota clínica</p>
-        <p class="text-xs leading-relaxed" style="color:var(--text-secondary)">El IMC es un indicador orientativo y no sustituye a la evaluación médica individualizada. Si tienes dudas sobre tu peso o composición corporal, consulta siempre con tu médico o nutricionista colegiado.</p>
+        <p class="font-semibold text-sm mb-1" style="color:var(--accent)" data-en="Clinical note">Nota clínica</p>
+        <p class="text-xs leading-relaxed" style="color:var(--text-secondary)" data-en="BMI is a guideline indicator and does not replace individualised medical evaluation. If you have concerns about your weight or body composition, always consult your doctor or registered nutritionist.">El IMC es un indicador orientativo y no sustituye a la evaluación médica individualizada. Si tienes dudas sobre tu peso o composición corporal, consulta siempre con tu médico o nutricionista colegiado.</p>
       </div>
     </div>
   </div>
@@ -519,85 +509,129 @@
 <section id="faq" class="py-16 md:py-24" style="background:var(--surface)">
   <div class="max-w-3xl mx-auto px-4 sm:px-6">
     <div class="mb-12 reveal">
-      <p class="section-label mb-3">Preguntas frecuentes</p>
-      <h2 class="text-3xl font-bold tracking-tight mb-4" style="color:var(--text-primary);letter-spacing:-0.025em">Todo sobre el IMC</h2>
-      <p class="text-sm" style="color:var(--text-secondary)">Respuestas basadas en evidencia científica a las preguntas más habituales sobre el IMC, el peso ideal y la salud corporal.</p>
+      <p class="section-label mb-3" data-en="Frequently asked questions">Preguntas frecuentes</p>
+      <h2 class="text-3xl font-bold tracking-tight mb-4" style="color:var(--text-primary);letter-spacing:-0.025em" data-en="All About BMI">Todo sobre el IMC</h2>
+      <p class="text-sm" style="color:var(--text-secondary)" data-en="Evidence-based answers to the most common questions about BMI, ideal weight and body health.">Respuestas basadas en evidencia científica a las preguntas más habituales sobre el IMC, el peso ideal y la salud corporal.</p>
     </div>
     <div class="rounded-xl overflow-hidden" style="border:1px solid var(--border);background:var(--surface)" id="faqContainer"></div>
   </div>
 </section>
 <div class="section-divider"></div>
-<!-- ======= CTA ======= -->
-<section id="cta-section" class="py-16 md:py-20 no-print" style="background:#0f172a">
-  <div class="max-w-4xl mx-auto px-4 sm:px-6 text-center">
-    <div class="reveal">
-      <p class="text-xs font-semibold uppercase tracking-widest mb-4" style="color:#3b82f6">Herramienta gratuita · Sin registro</p>
-      <h2 class="text-2xl sm:text-3xl font-bold mb-4 tracking-tight" style="color:#f0f6fc;letter-spacing:-0.025em">Conoce tu punto de partida</h2>
-      <p class="text-base mb-8 max-w-md mx-auto leading-relaxed" style="color:#6e7681">Tu salud empieza con información fiable. Calcula tu IMC en 10 segundos y comparte los resultados con quien quieras.</p>
-      <div class="flex flex-col sm:flex-row gap-3 justify-center">
-        <a href="#calculadora" class="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg text-sm font-semibold tracking-tight transition-all" style="background:#2563eb;color:#fff" onmouseover="this.style.background='#1d4ed8'" onmouseout="this.style.background='#2563eb'">
-          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>
-          Calcular mi IMC gratis
-        </a>
-        <button onclick="copyLink()" class="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg text-sm font-semibold transition-all" style="background:rgba(255,255,255,0.08);color:#f0f6fc;border:1px solid rgba(255,255,255,0.12)" onmouseover="this.style.background='rgba(255,255,255,0.12)'" onmouseout="this.style.background='rgba(255,255,255,0.08)'">
-          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"/></svg>
-          Copiar enlace
-        </button>
-      </div>
+
+<!-- ======= OTRAS HERRAMIENTAS ======= -->
+<section id="otras-herramientas" class="py-16 md:py-20 no-print" style="background:var(--surface)">
+  <div class="max-w-5xl mx-auto px-4 sm:px-6">
+    <div class="mb-8 reveal">
+      <p class="section-label mb-2" data-en="Related calculators">Calculadoras relacionadas</p>
+      <h2 class="text-2xl font-bold tracking-tight" style="color:var(--text-primary);letter-spacing:-0.025em" data-en="Other health tools">Otras herramientas de salud</h2>
+    </div>
+    <div class="tools-grid reveal">
+
+      <a href="./calorias-diarias/" class="tool-card">
+        <div class="tool-card-icon">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.777 17.656 7.343A7.975 7.975 0 0120 13a7.975 7.975 0 01-2.343 5.657z"/></svg>
+        </div>
+        <span class="tool-card-name" data-en="Daily Calories">Calorías diarias</span>
+        <span class="tool-card-desc">TDEE según actividad física y objetivo</span>
+      </a>
+
+      <a href="./calorias-quemadas/" class="tool-card">
+        <div class="tool-card-icon">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.777 17.656 7.343A7.975 7.975 0 0120 13a7.975 7.975 0 01-2.343 5.657z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M9.879 16.121A3 3 0 1012.015 11L11 14H9c0 .768.293 1.536.879 2.121z"/></svg>
+        </div>
+        <span class="tool-card-name" data-en="Calories Burned">Calorías quemadas</span>
+        <span class="tool-card-desc" data-en="Caloric expenditure by activity and duration">Gasto calórico por actividad física y duración</span>
+      </a>
+
+      <a href="./macros/" class="tool-card">
+        <div class="tool-card-icon">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M11 3.055A9.001 9.001 0 1020.945 13H11V3.055z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M20.488 9H15V3.512A9.025 9.025 0 0120.488 9z"/></svg>
+        </div>
+        <span class="tool-card-name" data-en="Macro Calculator">Calculadora Macros</span>
+        <span class="tool-card-desc" data-en="Ideal proteins, carbohydrates and fats">Proteínas, carbohidratos y grasas ideales</span>
+      </a>
+
+      <a href="./peso-ideal/" class="tool-card">
+        <div class="tool-card-icon">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3"/></svg>
+        </div>
+        <span class="tool-card-name" data-en="Ideal Weight">Peso ideal</span>
+        <span class="tool-card-desc" data-en="Healthy weight range by height and sex">Rango de peso saludable según altura y sexo</span>
+      </a>
+
+      <a href="./grasa-corporal/" class="tool-card">
+        <div class="tool-card-icon">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" stroke-width="1.8"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M12 8v4l3 3"/></svg>
+        </div>
+        <span class="tool-card-name" data-en="Body Fat %">% Grasa corporal</span>
+        <span class="tool-card-desc" data-en="Body fat percentage using the Navy formula">Porcentaje de grasa con fórmula naval</span>
+      </a>
+
+      <a href="./ffmi/" class="tool-card">
+        <div class="tool-card-icon">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/></svg>
+        </div>
+        <span class="tool-card-name" data-en="FFMI Calculator">Calculadora FFMI</span>
+        <span class="tool-card-desc">Índice de masa muscular libre de grasa</span>
+      </a>
+
+      <a href="./agua-diaria/" class="tool-card">
+        <div class="tool-card-icon">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M12 2C8.13 2 5 8 5 12a7 7 0 0014 0c0-4-3.13-10-7-10z"/></svg>
+        </div>
+        <span class="tool-card-name" data-en="Daily Water">Agua diaria</span>
+        <span class="tool-card-desc">Litros de agua recomendados según tu perfil</span>
+      </a>
+
     </div>
   </div>
 </section>
+
+</main>
 <!-- ======= FOOTER ======= -->
-<footer style="background:var(--surface);border-top:1px solid var(--border)">
-  <div class="max-w-5xl mx-auto px-4 sm:px-6 py-10">
-    <div class="flex flex-col md:flex-row gap-8 justify-between mb-8">
-      <div class="max-w-xs">
-        <div class="flex items-center gap-2.5 mb-3">
-          <svg width="22" height="22" viewBox="0 0 28 28" fill="none" aria-hidden="true">
-            <rect width="28" height="28" rx="7" fill="#2563EB"/>
-            <circle cx="14" cy="10" r="3.5" stroke="white" stroke-width="1.8" fill="none"/>
-            <path d="M7 21.5c0-3.87 3.13-7 7-7s7 3.13 7 7" stroke="white" stroke-width="1.8" stroke-linecap="round" fill="none"/>
-          </svg>
-          <span class="font-semibold text-sm" style="color:var(--text-primary)">IMC Calculadora</span>
-        </div>
-        <p class="text-xs leading-relaxed" style="color:var(--text-muted)">Herramienta informativa gratuita basada en los criterios oficiales de la Organización Mundial de la Salud (OMS). Solo para adultos ≥ 18 años. No sustituye la consulta médica.</p>
+<footer class="site-footer no-print">
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <!-- Marca -->
+      <div>
+        <a href="./" class="footer-logo">
+          <span class="footer-logo-icon" aria-hidden="true">
+            <svg width="18" height="18" viewBox="0 0 28 28" fill="none"><circle cx="14" cy="10" r="3.5" stroke="white" stroke-width="1.8" fill="none"/><path d="M7 21.5c0-3.87 3.13-7 7-7s7 3.13 7 7" stroke="white" stroke-width="1.8" stroke-linecap="round" fill="none"/></svg>
+          </span>
+          <span class="footer-logo-name" data-en="BMI Calculator">IMC Calculadora</span>
+        </a>
+        <p class="footer-desc" data-en="Free health tools: BMI, daily calories (TDEE), ideal weight, basal metabolic rate, body fat %, FFMI and more. Based on WHO criteria, Mifflin-St Jeor and Harris-Benedict formulas.">Herramientas gratuitas de salud: IMC, calorías diarias (TDEE), peso ideal, tasa metabólica basal, % grasa corporal, FFMI y más. Basado en criterios OMS, fórmulas Mifflin-St Jeor y Harris-Benedict.</p>
       </div>
-      <div class="flex gap-10 flex-wrap">
-        <div>
-          <p class="text-xs font-semibold uppercase tracking-wider mb-3" style="color:var(--text-primary)">Calculadoras</p>
-          <ul class="space-y-2 text-xs" style="color:var(--text-muted)">
-            <li><a href="./"                   class="hover:underline transition-colors" style="color:var(--text-muted)">Calculadora IMC</a></li>
-            <li><a href="./peso-ideal/"        class="hover:underline transition-colors" style="color:var(--text-muted)">Peso Ideal</a></li>
-            <li><a href="./calorias-diarias/"  class="hover:underline transition-colors" style="color:var(--text-muted)">Calorías Diarias</a></li>
-            <li><a href="./calorias-quemadas/" class="hover:underline transition-colors" style="color:var(--text-muted)">Calorías Quemadas</a></li>
-            <li><a href="./tmb/"               class="hover:underline transition-colors" style="color:var(--text-muted)">TMB</a></li>
-            <li><a href="./macros/"            class="hover:underline transition-colors" style="color:var(--text-muted)">Macros</a></li>
-            <li><a href="./ffmi/"              class="hover:underline transition-colors" style="color:var(--text-muted)">FFMI</a></li>
-            <li><a href="./grasa-corporal/"    class="hover:underline transition-colors" style="color:var(--text-muted)">Grasa Corporal</a></li>
-            <li><a href="./agua-diaria/"       class="hover:underline transition-colors" style="color:var(--text-muted)">Agua Diaria</a></li>
-          </ul>
-        </div>
-        <div>
-          <p class="text-xs font-semibold uppercase tracking-wider mb-3" style="color:var(--text-primary)">En esta página</p>
-          <ul class="space-y-2 text-xs" style="color:var(--text-muted)">
-            <li><a href="#calculadora"  class="hover:underline transition-colors" style="color:var(--text-muted)">Calculadora</a></li>
-            <li><a href="#que-es-imc"   class="hover:underline transition-colors" style="color:var(--text-muted)">Qué es el IMC</a></li>
-            <li><a href="#tabla-imc"    class="hover:underline transition-colors" style="color:var(--text-muted)">Tabla IMC</a></li>
-            <li><a href="#limitaciones" class="hover:underline transition-colors" style="color:var(--text-muted)">Limitaciones</a></li>
-            <li><a href="#faq"          class="hover:underline transition-colors" style="color:var(--text-muted)">FAQ</a></li>
-          </ul>
-        </div>
-      </div>
+      <!-- Nav 1 -->
+      <nav aria-label="Peso y calorías">
+        <p class="footer-nav-title" data-en="Weight &amp; Calories">Peso y calorías</p>
+        <ul class="footer-nav-list">
+          <li><a href="./" data-en="BMI Calculator">Calculadora IMC</a></li>
+          <li><a href="./peso-ideal/" data-en="Ideal Weight Calculator">Calculadora Peso Ideal</a></li>
+          <li><a href="./calorias-diarias/" data-en="Daily Calories (TDEE)">Calorías Diarias (TDEE)</a></li>
+          <li><a href="./calorias-quemadas/" data-en="Calories Burned">Calorías Quemadas</a></li>
+        </ul>
+      </nav>
+      <!-- Nav 2 -->
+      <nav aria-label="Composición corporal">
+        <p class="footer-nav-title" data-en="Body Composition">Composición corporal</p>
+        <ul class="footer-nav-list">
+          <li><a href="./macros/" data-en="Macro Calculator">Calculadora de Macros</a></li>
+          <li><a href="./grasa-corporal/" data-en="Body Fat % (US Navy)">% Grasa Corporal (US Navy)</a></li>
+          <li><a href="./ffmi/" data-en="FFMI Index">Índice FFMI</a></li>
+          <li><a href="./agua-diaria/" data-en="Recommended Daily Water">Agua Diaria Recomendada</a></li>
+        </ul>
+      </nav>
     </div>
-    <div class="pt-6 flex flex-col sm:flex-row items-center justify-between gap-2 text-xs" style="border-top:1px solid var(--border);color:var(--text-muted)">
-      <p>© 2026 IMC Calculadora. Todos los derechos reservados.</p>
-      <p>Solo orientativo · Criterios OMS · España</p>
+    <div class="footer-bottom">
+      <p data-en="© 2026 BMI Calculator · All rights reserved.">© 2026 IMC Calculadora · Todos los derechos reservados.</p>
+      <p data-en="For guidance only · Not a substitute for medical advice · WHO criteria">Solo orientativo · No sustituye el consejo médico · Criterios OMS</p>
     </div>
   </div>
 </footer>
 <!-- Mobile sticky CTA -->
 <div id="mobileCTA" class="hidden md:hidden no-print">
-  <a href="#calculadora" class="btn-primary">
+  <a href="#calculadora" class="btn-primary" data-en='Calculate my BMI <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/></svg>'>
     Calcular mi IMC
     <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/></svg>
   </a>
@@ -618,5 +652,6 @@
 <script src="js/calculator.js"></script>
 <script src="js/ui.js"></script>
 <script src="js/faq.js"></script>
+  <script src="./js/lang.js"></script>
 </body>
 </html>

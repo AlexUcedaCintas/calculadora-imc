@@ -113,6 +113,7 @@
   </script>
 </head>
 <body class="antialiased">
+<a href="#main-content" class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:rounded-lg focus:text-sm focus:font-semibold" style="background:var(--accent);color:#fff" data-en="Skip to main content">Saltar al contenido principal</a>
 
 <!-- ======= NAVBAR ======= -->
 <header class="navbar">
@@ -124,19 +125,19 @@
         <path d="M7 21.5c0-3.87 3.13-7 7-7s7 3.13 7 7" stroke="white" stroke-width="1.8" stroke-linecap="round" fill="none"/>
         <path d="M14 17v4M12 21h4" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
       </svg>
-      <span class="font-semibold text-sm tracking-tight hidden sm:inline" style="color:var(--text-primary)">IMC <span style="color:var(--accent)">Calculadora</span></span>
+      <span class="font-semibold text-sm tracking-tight hidden sm:inline" style="color:var(--text-primary)" data-en="BMI <span style=&quot;color:var(--accent)&quot;>Calculator</span>">IMC <span style="color:var(--accent)">Calculadora</span></span>
     </a>
     <nav class="calc-nav" aria-label="Calculadoras">
-      <a href="../"                   class="calc-nav-link">IMC</a>
-      <a href="../peso-ideal/"        class="calc-nav-link active">Peso ideal</a>
-      <a href="../calorias-diarias/"  class="calc-nav-link">Calorías</a>
-      <a href="../calorias-quemadas/" class="calc-nav-link">Cal. Quemadas</a>
-      <a href="../tmb/"               class="calc-nav-link">TMB</a>
+      <a href="../"                   class="calc-nav-link" data-en="BMI">IMC</a>
+      <a href="../peso-ideal/"        class="calc-nav-link active" data-en="Ideal Weight">Peso ideal</a>
+      <a href="../calorias-diarias/"  class="calc-nav-link" data-en="Calories">Calorías</a>
+      <a href="../calorias-quemadas/" class="calc-nav-link" data-en="Calories Burned">Cal. Quemadas</a>
       <a href="../macros/"            class="calc-nav-link">Macros</a>
       <a href="../ffmi/"              class="calc-nav-link">FFMI</a>
-      <a href="../grasa-corporal/"    class="calc-nav-link">% Grasa</a>
-      <a href="../agua-diaria/"       class="calc-nav-link">Agua</a>
+      <a href="../grasa-corporal/"    class="calc-nav-link" data-en="Body Fat">% Grasa</a>
+      <a href="../agua-diaria/"       class="calc-nav-link" data-en="Water">Agua</a>
     </nav>
+    <button class="lang-btn shrink-0" onclick="toggleLang()" aria-label="Switch to English">EN</button>
     <button id="darkToggle" class="theme-toggle shrink-0" aria-label="Cambiar modo oscuro">
       <svg id="iconLight" class="w-4 h-4 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><path stroke-linecap="round" d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
       <svg id="iconDark"  class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/></svg>
@@ -152,19 +153,20 @@
     <div class="text-center mb-8 lg:mb-10">
       <div class="trust-badge inline-flex mb-5">
         <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
-        Fórmulas clínicas · Actualizado 2026
+        <span class="lang-es">Fórmulas clínicas · Actualizado 2026</span><span class="lang-en">Clinical formulas · Updated 2026</span>
       </div>
       <h1 class="text-4xl sm:text-5xl font-bold tracking-tight mb-4" style="color:var(--text-primary);letter-spacing:-0.03em">
-        Calculadora de <span style="color:var(--accent)">Peso Ideal</span> según altura y sexo
+        <span class="lang-es">Calculadora de <span style="color:var(--accent)">Peso Ideal</span> según altura y sexo</span><span class="lang-en">Ideal <span style="color:var(--accent)">Weight</span> Calculator by height and sex</span>
       </h1>
       <p class="text-base max-w-xl mx-auto leading-relaxed mb-6" style="color:var(--text-secondary)">
-        Obtén tu peso de referencia según las fórmulas <strong style="color:var(--text-primary)">Devine, Robinson y Miller</strong>, usadas en entornos clínicos, más el rango saludable según el <strong style="color:var(--text-primary)">IMC de la OMS</strong>.
+        <span class="lang-es">Obtén tu peso de referencia según las fórmulas <strong style="color:var(--text-primary)">Devine, Robinson y Miller</strong>, usadas en entornos clínicos, más el rango saludable según el <strong style="color:var(--text-primary)">IMC de la OMS</strong>.</span>
+        <span class="lang-en">Get your reference weight according to the <strong style="color:var(--text-primary)">Devine, Robinson and Miller</strong> formulas, used in clinical settings, plus the healthy range according to the <strong style="color:var(--text-primary)">WHO BMI</strong>.</span>
       </p>
       <div class="flex items-center justify-center flex-wrap gap-2" style="color:var(--text-muted)">
-        <span class="feature-pill">3 fórmulas clínicas</span>
+        <span class="feature-pill" data-en="3 clinical formulas">3 fórmulas clínicas</span>
         <span class="feature-pill">cm / pulgadas</span>
-        <span class="feature-pill">100% privado</span>
-        <span class="feature-pill">Rango OMS incluido</span>
+        <span class="feature-pill" data-en="100% private">100% privado</span>
+        <span class="feature-pill" data-en="WHO range included">Rango OMS incluido</span>
       </div>
     </div>
 
@@ -177,7 +179,7 @@
 
           <!-- Altura -->
           <div class="cib-field">
-            <label class="cib-label" for="height">Altura <span id="heightUnit" class="cib-unit">(cm)</span></label>
+            <label class="cib-label" for="height"><span data-en="Height">Altura</span> <span id="heightUnit" class="cib-unit">(cm)</span></label>
             <input id="height" class="cib-input" type="number" min="100" max="250" step="0.1" placeholder="170" value="175"
               autocomplete="off" inputmode="decimal" aria-label="Altura" />
             <p id="heightError" class="cib-error hidden">Valor fuera de rango (100–250)</p>
@@ -188,7 +190,7 @@
 
           <!-- Sexo -->
           <div class="cib-field cib-field--gender">
-            <label class="cib-label">Sexo biológico</label>
+            <label class="cib-label" data-en="Biological sex">Sexo biológico</label>
             <div class="cib-gender">
               <div class="gender-option selected" id="gMale" onclick="setGender('male')" role="radio" aria-checked="true" tabindex="0">
                 <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="10" cy="10" r="6" stroke-width="2"/><path d="M14.5 5.5L19 1M19 1h-4M19 1v4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
@@ -199,26 +201,19 @@
                 Mujer
               </div>
             </div>
-          </div>
-
-          <!-- Botón calcular -->
-          <button id="calcBtn" class="cib-btn" onclick="calculate()">
-            Calcular
-            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M13 7l5 5m0 0l-5 5m5-5H6"/></svg>
-          </button>
-        </div>
+          </div>        </div>
 
         <!-- Subrow: unidades -->
         <div class="calc-subrow">
           <div class="unit-toggle">
             <button class="unit-btn active" id="btnMetric" onclick="setUnit('metric')">cm</button>
-            <button class="unit-btn" id="btnImperial" onclick="setUnit('imperial')">pulgadas</button>
+            <button class="unit-btn" id="btnImperial" onclick="setUnit('imperial')" data-en="inches">pulgadas</button>
           </div>
           <div class="cp-trust">
             <svg class="w-3 h-3" style="color:#4ade80" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
-            <span>Sin registro</span>
+            <span data-en="No registration">Sin registro</span>
             <span class="cp-trust-dot">·</span>
-            <span>Datos no almacenados</span>
+            <span data-en="Data not stored">Datos no almacenados</span>
             <span class="cp-trust-dot">·</span>
             <span>Fórmulas clínicas</span>
           </div>
@@ -232,8 +227,8 @@
         <div id="resultPlaceholder" class="result-placeholder">
           <div style="font-size:3rem;line-height:1;margin-bottom:0.5rem">⚖️</div>
           <div class="rp-score">— kg</div>
-          <p class="rp-label">Introduce tu altura y selecciona tu sexo</p>
-          <p class="rp-desc">Obtendrás tu peso de referencia según tres fórmulas clínicas y el rango IMC saludable de la OMS.</p>
+          <p class="rp-label" data-en="Enter your height and select your sex">Introduce tu altura y selecciona tu sexo</p>
+          <p class="rp-desc" data-en="You will get your reference weight from three clinical formulas and the healthy WHO BMI range.">Obtendrás tu peso de referencia según tres fórmulas clínicas y el rango IMC saludable de la OMS.</p>
         </div>
 
         <!-- Resultados -->
@@ -246,37 +241,37 @@
                 <span id="mainVal">—</span>
                 <span class="res-big-unit">kg</span>
               </div>
-              <div class="res-big-label">Media de las 3 fórmulas</div>
+              <div class="res-big-label" data-en="Average of 3 formulas">Media de las 3 fórmulas</div>
             </div>
 
             <!-- Mini cards -->
             <div class="res-cards-grid">
               <div class="res-mini-card">
-                <div class="res-mini-label">Rango IMC OMS</div>
+                <div class="res-mini-label" data-en="WHO BMI Range">Rango IMC OMS</div>
                 <div class="res-mini-value" id="imcRange">—</div>
-                <div class="res-mini-sub">IMC 18.5–24.9</div>
+                <div class="res-mini-sub">IMC / BMI 18.5–24.9</div>
               </div>
               <div class="res-mini-card">
-                <div class="res-mini-label">Fórmula Devine</div>
+                <div class="res-mini-label" data-en="Devine Formula">Fórmula Devine</div>
                 <div class="res-mini-value" id="devineVal">—</div>
-                <div class="res-mini-sub">Uso clínico desde 1974</div>
+                <div class="res-mini-sub" data-en="Clinical use since 1974">Uso clínico desde 1974</div>
               </div>
               <div class="res-mini-card">
-                <div class="res-mini-label">Fórmula Robinson</div>
+                <div class="res-mini-label" data-en="Robinson Formula">Fórmula Robinson</div>
                 <div class="res-mini-value" id="robinsonVal">—</div>
-                <div class="res-mini-sub">Revisión de 1983</div>
+                <div class="res-mini-sub" data-en="1983 revision">Revisión de 1983</div>
               </div>
               <div class="res-mini-card">
-                <div class="res-mini-label">Fórmula Miller</div>
+                <div class="res-mini-label" data-en="Miller Formula">Fórmula Miller</div>
                 <div class="res-mini-value" id="millerVal">—</div>
-                <div class="res-mini-sub">Revisión de 1983</div>
+                <div class="res-mini-sub" data-en="1983 revision">Revisión de 1983</div>
               </div>
             </div>
 
             <!-- Barra de rango visual -->
             <div id="rangeBar" style="margin-top:1.25rem;padding:1rem 1.25rem;background:var(--surface-2);border:1px solid var(--border);border-radius:var(--radius-lg)">
               <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.5rem">
-                <span style="font-size:0.75rem;font-weight:500;color:var(--text-secondary)">Distribución de fórmulas</span>
+                <span style="font-size:0.75rem;font-weight:500;color:var(--text-secondary)" data-en="Formula distribution">Distribución de fórmulas</span>
                 <span id="rangeLabel" style="font-size:0.75rem;color:var(--text-muted)"></span>
               </div>
               <div style="position:relative;height:8px;background:var(--surface-3);border-radius:99px;overflow:visible">
@@ -285,7 +280,7 @@
               </div>
               <div style="display:flex;justify-content:space-between;margin-top:0.4rem">
                 <span style="font-size:0.7rem;color:var(--text-muted)" id="barMinLabel">—</span>
-                <span style="font-size:0.7rem;color:var(--accent);font-weight:600" id="barAvgLabel">Media</span>
+                <span style="font-size:0.7rem;color:var(--accent);font-weight:600" id="barAvgLabel" data-en="Average">Media</span>
                 <span style="font-size:0.7rem;color:var(--text-muted)" id="barMaxLabel">—</span>
               </div>
             </div>
@@ -309,10 +304,10 @@
   <section style="padding:4rem 0;background:var(--surface)" aria-label="Explicación del cálculo">
     <div class="max-w-6xl mx-auto px-4 sm:px-6">
       <div class="text-center mb-10 reveal">
-        <span class="section-label">Metodología</span>
-        <h2 class="text-3xl font-bold mt-2 mb-3" style="color:var(--text-primary);letter-spacing:-0.02em">¿Cómo se calcula el peso ideal?</h2>
+        <span class="section-label" data-en="Methodology">Metodología</span>
+        <h2 class="text-3xl font-bold mt-2 mb-3" style="color:var(--text-primary);letter-spacing:-0.02em" data-en="How is ideal weight calculated?">¿Cómo se calcula el peso ideal?</h2>
         <p class="text-base max-w-2xl mx-auto" style="color:var(--text-secondary)">
-          Combinamos tres fórmulas validadas clínicamente y el rango IMC de la OMS para darte una referencia completa.
+          <span class="lang-es">Combinamos tres fórmulas validadas clínicamente y el rango IMC de la OMS para darte una referencia completa.</span><span class="lang-en">We combine three clinically validated formulas and the WHO BMI range to give you a complete reference.</span>
         </p>
       </div>
       <div class="tools-grid" style="grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.25rem">
@@ -321,29 +316,29 @@
           <div class="tool-card-icon" style="background:var(--accent-light);color:var(--accent);width:44px;height:44px;border-radius:12px;display:flex;align-items:center;justify-content:center;margin-bottom:1rem">
             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
           </div>
-          <h3 class="font-semibold mb-2" style="color:var(--text-primary)">¿Qué es el peso ideal?</h3>
+          <h3 class="font-semibold mb-2" style="color:var(--text-primary)" data-en="What is ideal weight?">¿Qué es el peso ideal?</h3>
           <p style="font-size:0.875rem;color:var(--text-secondary);line-height:1.65">
-            El peso ideal no es un número exacto sino un <strong style="color:var(--text-primary)">rango de referencia</strong>. Varía según la altura, el sexo, la constitución y la masa muscular. Ninguna fórmula captura toda esa variabilidad, por eso es útil ver varias estimaciones a la vez.
+            <span class="lang-es">El peso ideal no es un número exacto sino un <strong style="color:var(--text-primary)">rango de referencia</strong>. Varía según la altura, el sexo, la constitución y la masa muscular. Ninguna fórmula captura toda esa variabilidad, por eso es útil ver varias estimaciones a la vez.</span><span class="lang-en">Ideal weight is not an exact number but a <strong style="color:var(--text-primary)">reference range</strong>. It varies by height, sex, build and muscle mass. No formula captures all that variability, which is why it is useful to see several estimates at once.</span>
           </p>
         </article>
 
         <article class="card card-hover reveal" style="padding:1.5rem">
-          <div class="tool-card-icon" style="background:#ecfdf5;color:#059669;width:44px;height:44px;border-radius:12px;display:flex;align-items:center;justify-content:center;margin-bottom:1rem">
+          <div class="tool-card-icon icon-bg-green" style="color:#059669;width:44px;height:44px;border-radius:12px;display:flex;align-items:center;justify-content:center;margin-bottom:1rem">
             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
           </div>
-          <h3 class="font-semibold mb-2" style="color:var(--text-primary)">Fórmula Devine (1974)</h3>
+          <h3 class="font-semibold mb-2" style="color:var(--text-primary)" data-en="Devine Formula (1974)">Fórmula Devine (1974)</h3>
           <p style="font-size:0.875rem;color:var(--text-secondary);line-height:1.65">
-            La fórmula más utilizada en <strong style="color:var(--text-primary)">entornos clínicos y hospitalarios</strong>. Desarrollada por el Dr. B. J. Devine para calcular dosis de medicamentos. Para hombres: 50 + 2,3 × (altura en pulgadas − 60). Para mujeres: 45,5 + 2,3 × (altura en pulgadas − 60).
+            <span class="lang-es">La fórmula más utilizada en <strong style="color:var(--text-primary)">entornos clínicos y hospitalarios</strong>. Desarrollada por el Dr. B. J. Devine para calcular dosis de medicamentos. Para hombres: 50 + 2,3 × (altura en pulgadas − 60). Para mujeres: 45,5 + 2,3 × (altura en pulgadas − 60).</span><span class="lang-en">The most widely used formula in <strong style="color:var(--text-primary)">clinical and hospital settings</strong>. Developed by Dr B. J. Devine to calculate medication doses. For men: 50 + 2.3 × (height in inches − 60). For women: 45.5 + 2.3 × (height in inches − 60).</span>
           </p>
         </article>
 
         <article class="card card-hover reveal" style="padding:1.5rem">
-          <div class="tool-card-icon" style="background:#fff7ed;color:#ea580c;width:44px;height:44px;border-radius:12px;display:flex;align-items:center;justify-content:center;margin-bottom:1rem">
+          <div class="tool-card-icon icon-bg-orange" style="color:#ea580c;width:44px;height:44px;border-radius:12px;display:flex;align-items:center;justify-content:center;margin-bottom:1rem">
             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
           </div>
-          <h3 class="font-semibold mb-2" style="color:var(--text-primary)">Limitaciones importantes</h3>
+          <h3 class="font-semibold mb-2" style="color:var(--text-primary)" data-en="Important limitations">Limitaciones importantes</h3>
           <p style="font-size:0.875rem;color:var(--text-secondary);line-height:1.65">
-            Estas fórmulas <strong style="color:var(--text-primary)">no tienen en cuenta</strong> la masa muscular, el porcentaje de grasa, la edad, la etnia ni la complexión ósea. Un deportista de alta musculación puede tener un "peso ideal" superior al calculado. Úsalas como orientación, no como diagnóstico.
+            <span class="lang-es">Estas fórmulas <strong style="color:var(--text-primary)">no tienen en cuenta</strong> la masa muscular, el porcentaje de grasa, la edad, la etnia ni la complexión ósea. Un deportista de alta musculación puede tener un "peso ideal" superior al calculado. Úsalas como orientación, no como diagnóstico.</span><span class="lang-en">These formulas <strong style="color:var(--text-primary)">do not account for</strong> muscle mass, body fat percentage, age, ethnicity or bone structure. A highly muscular athlete may have an "ideal weight" higher than calculated. Use them as guidance, not as diagnosis.</span>
           </p>
         </article>
 
@@ -355,18 +350,18 @@
   <section style="padding:4rem 0;background:var(--surface-2);border-top:1px solid var(--border);border-bottom:1px solid var(--border)" aria-label="Tabla comparativa de fórmulas">
     <div class="max-w-6xl mx-auto px-4 sm:px-6">
       <div class="text-center mb-8 reveal">
-        <span class="section-label">Referencia rápida</span>
-        <h2 class="text-2xl font-bold mt-2 mb-2" style="color:var(--text-primary);letter-spacing:-0.02em">Peso ideal por altura — Hombre y Mujer</h2>
-        <p style="font-size:0.875rem;color:var(--text-secondary)">Valores calculados con la fórmula Devine (kg). Para otras fórmulas usa la calculadora.</p>
+        <span class="section-label" data-en="Quick reference">Referencia rápida</span>
+        <h2 class="text-2xl font-bold mt-2 mb-2" style="color:var(--text-primary);letter-spacing:-0.02em" data-en="Ideal weight by height — Man and Woman">Peso ideal por altura — Hombre y Mujer</h2>
+        <p style="font-size:0.875rem;color:var(--text-secondary)" data-en="Values calculated using the Devine formula (kg). For other formulas use the calculator.">Valores calculados con la fórmula Devine (kg). Para otras fórmulas usa la calculadora.</p>
       </div>
       <div class="reveal" style="overflow-x:auto;border-radius:var(--radius-lg);border:1px solid var(--border)">
         <table class="res-table" style="width:100%;min-width:480px">
           <thead>
             <tr>
-              <th>Altura</th>
-              <th>Hombre (Devine)</th>
-              <th>Mujer (Devine)</th>
-              <th>Rango IMC OMS</th>
+              <th data-en="Height">Altura</th>
+              <th data-en="Men (Devine)">Hombre (Devine)</th>
+              <th data-en="Women (Devine)">Mujer (Devine)</th>
+              <th data-en="WHO BMI Range">Rango IMC OMS</th>
             </tr>
           </thead>
           <tbody>
@@ -388,59 +383,64 @@
   <section id="faq" style="padding:4rem 0;background:var(--surface)" aria-labelledby="faqTitle">
     <div class="max-w-3xl mx-auto px-4 sm:px-6">
       <div class="text-center mb-10 reveal">
-        <span class="section-label">Preguntas frecuentes</span>
-        <h2 id="faqTitle" class="text-3xl font-bold mt-2" style="color:var(--text-primary);letter-spacing:-0.02em">Dudas sobre el peso ideal</h2>
+        <span class="section-label" data-en="Frequently asked questions">Preguntas frecuentes</span>
+        <h2 id="faqTitle" class="text-3xl font-bold mt-2" style="color:var(--text-primary);letter-spacing:-0.02em" data-en="Questions about ideal weight">Dudas sobre el peso ideal</h2>
       </div>
 
       <div style="display:flex;flex-direction:column;gap:1rem">
 
         <details class="card reveal" style="padding:0;overflow:hidden">
           <summary style="padding:1.25rem 1.5rem;font-weight:600;cursor:pointer;color:var(--text-primary);list-style:none;display:flex;justify-content:space-between;align-items:center;gap:1rem">
-            ¿Cuál es mi peso ideal según mi altura?
+            <span data-en="What is my ideal weight for my height?">¿Cuál es mi peso ideal según mi altura?</span>
             <svg class="w-4 h-4 shrink-0" style="color:var(--text-muted);transition:transform 0.2s" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
           </summary>
           <div style="padding:0 1.5rem 1.25rem;color:var(--text-secondary);font-size:0.9rem;line-height:1.7;border-top:1px solid var(--border)">
-            El peso ideal depende de la altura y el sexo biológico. Para una persona de 170 cm, la fórmula Devine estima unos 60,5 kg para hombres y 56 kg para mujeres. Sin embargo, el peso ideal es un rango, no un número exacto. El rango IMC saludable (18,5–24,9) suele ser más representativo. Usa la calculadora de arriba para obtener tu estimación personalizada.
+            <span class="lang-es">El peso ideal depende de la altura y el sexo biológico. Para una persona de 170 cm, la fórmula Devine estima unos 60,5 kg para hombres y 56 kg para mujeres. Sin embargo, el peso ideal es un rango, no un número exacto. El rango IMC saludable (18,5–24,9) suele ser más representativo. Usa la calculadora de arriba para obtener tu estimación personalizada.</span>
+            <span class="lang-en">Ideal weight depends on height and biological sex. For a person 170 cm tall, the Devine formula estimates about 60.5 kg for men and 56 kg for women. However, ideal weight is a range, not an exact number. The healthy BMI range (18.5–24.9) is usually more representative. Use the calculator above to get your personalised estimate.</span>
           </div>
         </details>
 
         <details class="card reveal" style="padding:0;overflow:hidden">
           <summary style="padding:1.25rem 1.5rem;font-weight:600;cursor:pointer;color:var(--text-primary);list-style:none;display:flex;justify-content:space-between;align-items:center;gap:1rem">
-            ¿Qué fórmula es más fiable para calcular el peso ideal?
+            <span data-en="Which formula is most reliable for calculating ideal weight?">¿Qué fórmula es más fiable para calcular el peso ideal?</span>
             <svg class="w-4 h-4 shrink-0" style="color:var(--text-muted);transition:transform 0.2s" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
           </summary>
           <div style="padding:0 1.5rem 1.25rem;color:var(--text-secondary);font-size:0.9rem;line-height:1.7;border-top:1px solid var(--border)">
-            No existe una fórmula universalmente superior. La fórmula Devine (1974) es la más usada en entornos clínicos para calcular dosis de medicamentos. Robinson (1983) y Miller (1983) son revisiones posteriores. Lo más recomendable es considerar la media de varias fórmulas o el rango IMC saludable de la OMS como referencia principal.
+            <span class="lang-es">No existe una fórmula universalmente superior. La fórmula Devine (1974) es la más usada en entornos clínicos para calcular dosis de medicamentos. Robinson (1983) y Miller (1983) son revisiones posteriores. Lo más recomendable es considerar la media de varias fórmulas o el rango IMC saludable de la OMS como referencia principal.</span>
+            <span class="lang-en">There is no universally superior formula. The Devine formula (1974) is the most used in clinical settings for calculating medication doses. Robinson (1983) and Miller (1983) are subsequent revisions. The most advisable approach is to consider the average of several formulas or the WHO healthy BMI range as the main reference.</span>
           </div>
         </details>
 
         <details class="card reveal" style="padding:0;overflow:hidden">
           <summary style="padding:1.25rem 1.5rem;font-weight:600;cursor:pointer;color:var(--text-primary);list-style:none;display:flex;justify-content:space-between;align-items:center;gap:1rem">
-            ¿Es lo mismo peso ideal que peso saludable?
+            <span data-en="Is ideal weight the same as healthy weight?">¿Es lo mismo peso ideal que peso saludable?</span>
             <svg class="w-4 h-4 shrink-0" style="color:var(--text-muted);transition:transform 0.2s" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
           </summary>
           <div style="padding:0 1.5rem 1.25rem;color:var(--text-secondary);font-size:0.9rem;line-height:1.7;border-top:1px solid var(--border)">
-            No exactamente. El peso ideal es una estimación matemática basada en altura y sexo. El peso saludable es el rango en el que el riesgo de enfermedades relacionadas con el peso es mínimo, definido por la OMS como un IMC entre 18,5 y 24,9. Son conceptos relacionados pero no idénticos: alguien puede estar en peso ideal calculado pero fuera del rango saludable, o viceversa.
+            <span class="lang-es">No exactamente. El peso ideal es una estimación matemática basada en altura y sexo. El peso saludable es el rango en el que el riesgo de enfermedades relacionadas con el peso es mínimo, definido por la OMS como un IMC entre 18,5 y 24,9. Son conceptos relacionados pero no idénticos: alguien puede estar en peso ideal calculado pero fuera del rango saludable, o viceversa.</span>
+            <span class="lang-en">Not exactly. Ideal weight is a mathematical estimate based on height and sex. Healthy weight is the range in which the risk of weight-related diseases is minimal, defined by the WHO as a BMI between 18.5 and 24.9. They are related but not identical concepts: someone may be at their calculated ideal weight but outside the healthy range, or vice versa.</span>
           </div>
         </details>
 
         <details class="card reveal" style="padding:0;overflow:hidden">
           <summary style="padding:1.25rem 1.5rem;font-weight:600;cursor:pointer;color:var(--text-primary);list-style:none;display:flex;justify-content:space-between;align-items:center;gap:1rem">
-            ¿El peso ideal cambia con la edad?
+            <span data-en="Does ideal weight change with age?">¿El peso ideal cambia con la edad?</span>
             <svg class="w-4 h-4 shrink-0" style="color:var(--text-muted);transition:transform 0.2s" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
           </summary>
           <div style="padding:0 1.5rem 1.25rem;color:var(--text-secondary);font-size:0.9rem;line-height:1.7;border-top:1px solid var(--border)">
-            Las fórmulas clásicas no ajustan por edad. Sin embargo, la composición corporal cambia con los años: a partir de los 40–50 se pierde masa muscular (sarcopenia) y aumenta la proporción de grasa. Algunos expertos sugieren que en mayores de 65 años un IMC de hasta 27 puede ser aceptable, ya que cierta reserva de peso puede ser protectora.
+            <span class="lang-es">Las fórmulas clásicas no ajustan por edad. Sin embargo, la composición corporal cambia con los años: a partir de los 40–50 se pierde masa muscular (sarcopenia) y aumenta la proporción de grasa. Algunos expertos sugieren que en mayores de 65 años un IMC de hasta 27 puede ser aceptable, ya que cierta reserva de peso puede ser protectora.</span>
+            <span class="lang-en">Classic formulas do not adjust for age. However, body composition changes over the years: from age 40–50 muscle mass is lost (sarcopenia) and the proportion of fat increases. Some experts suggest that in people over 65, a BMI of up to 27 may be acceptable, as some weight reserve can be protective.</span>
           </div>
         </details>
 
         <details class="card reveal" style="padding:0;overflow:hidden">
           <summary style="padding:1.25rem 1.5rem;font-weight:600;cursor:pointer;color:var(--text-primary);list-style:none;display:flex;justify-content:space-between;align-items:center;gap:1rem">
-            ¿Por qué las fórmulas dan resultados distintos?
+            <span data-en="Why do the formulas give different results?">¿Por qué las fórmulas dan resultados distintos?</span>
             <svg class="w-4 h-4 shrink-0" style="color:var(--text-muted);transition:transform 0.2s" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
           </summary>
           <div style="padding:0 1.5rem 1.25rem;color:var(--text-secondary);font-size:0.9rem;line-height:1.7;border-top:1px solid var(--border)">
-            Cada fórmula fue desarrollada con diferentes poblaciones de referencia y metodologías. Devine (1974) se basó en pacientes hospitalizados; Robinson (1983) y Miller (1983) revisaron esos datos con nuevas cohortes. Las diferencias suelen ser de 2–5 kg, lo que refleja la variabilidad natural entre personas de la misma altura y sexo.
+            <span class="lang-es">Cada fórmula fue desarrollada con diferentes poblaciones de referencia y metodologías. Devine (1974) se basó en pacientes hospitalizados; Robinson (1983) y Miller (1983) revisaron esos datos con nuevas cohortes. Las diferencias suelen ser de 2–5 kg, lo que refleja la variabilidad natural entre personas de la misma altura y sexo.</span>
+            <span class="lang-en">Each formula was developed with different reference populations and methodologies. Devine (1974) was based on hospitalised patients; Robinson (1983) and Miller (1983) revised those data with new cohorts. Differences are usually 2–5 kg, reflecting the natural variability between people of the same height and sex.</span>
           </div>
         </details>
 
@@ -448,79 +448,127 @@
     </div>
   </section>
 
-  <!-- Calculadoras relacionadas -->
-  <section style="padding:4rem 0;background:var(--surface-2);border-top:1px solid var(--border)" aria-label="Otras calculadoras">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6">
-      <div class="text-center mb-8 reveal">
-        <span class="section-label">Sigue explorando</span>
-        <h2 class="text-2xl font-bold mt-2" style="color:var(--text-primary);letter-spacing:-0.02em">Calculadoras relacionadas</h2>
-      </div>
-      <div class="tools-grid reveal">
-        <a href="../" class="tool-card">
-          <div class="tool-card-icon">
-            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
-          </div>
-          <div class="tool-card-name">Calculadora IMC</div>
-          <div class="tool-card-desc">Índice de masa corporal según OMS</div>
-        </a>
-        <a href="../calorias-diarias/" class="tool-card">
-          <div class="tool-card-icon">
-            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.777 17.656 7.343A7.975 7.975 0 0120 13a7.975 7.975 0 01-2.343 5.657z"/></svg>
-          </div>
-          <div class="tool-card-name">Calorías diarias</div>
-          <div class="tool-card-desc">Necesidades calóricas según actividad</div>
-        </a>
-        <a href="../tmb/" class="tool-card">
-          <div class="tool-card-icon">
-            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>
-          </div>
-          <div class="tool-card-name">Tasa Metabólica Basal</div>
-          <div class="tool-card-desc">Calorías en reposo con fórmula Harris-Benedict</div>
-        </a>
-        <a href="../grasa-corporal/" class="tool-card">
-          <div class="tool-card-icon">
-            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" stroke-width="2"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3"/></svg>
-          </div>
-          <div class="tool-card-name">% Grasa corporal</div>
-          <div class="tool-card-desc">Porcentaje de grasa con método US Navy</div>
-        </a>
-      </div>
+
+<div class="section-divider"></div>
+
+<!-- ======= OTRAS HERRAMIENTAS ======= -->
+<section id="otras-herramientas" class="py-16 md:py-20 no-print" style="background:var(--surface)">
+  <div class="max-w-5xl mx-auto px-4 sm:px-6">
+    <div class="mb-8 reveal">
+      <p class="section-label mb-2" data-en="Related calculators">Calculadoras relacionadas</p>
+      <h2 class="text-2xl font-bold tracking-tight" style="color:var(--text-primary);letter-spacing:-0.025em" data-en="Other health tools">Otras herramientas de salud</h2>
     </div>
-  </section>
+    <div class="tools-grid reveal">
+
+      <a href="../" class="tool-card">
+        <div class="tool-card-icon">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+        </div>
+        <span class="tool-card-name" data-en="BMI Calculator">Calculadora IMC</span>
+        <span class="tool-card-desc" data-en="Body Mass Index per WHO criteria">Índice de Masa Corporal según criterios OMS</span>
+      </a>
+
+      <a href="../calorias-diarias/" class="tool-card">
+        <div class="tool-card-icon">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.777 17.656 7.343A7.975 7.975 0 0120 13a7.975 7.975 0 01-2.343 5.657z"/></svg>
+        </div>
+        <span class="tool-card-name" data-en="Daily Calories">Calorías diarias</span>
+        <span class="tool-card-desc">TDEE según actividad física y objetivo</span>
+      </a>
+
+      <a href="../calorias-quemadas/" class="tool-card">
+        <div class="tool-card-icon">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.777 17.656 7.343A7.975 7.975 0 0120 13a7.975 7.975 0 01-2.343 5.657z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M9.879 16.121A3 3 0 1012.015 11L11 14H9c0 .768.293 1.536.879 2.121z"/></svg>
+        </div>
+        <span class="tool-card-name" data-en="Calories Burned">Calorías quemadas</span>
+        <span class="tool-card-desc" data-en="Caloric expenditure by activity and duration">Gasto calórico por actividad física y duración</span>
+      </a>
+
+      <a href="../macros/" class="tool-card">
+        <div class="tool-card-icon">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M11 3.055A9.001 9.001 0 1020.945 13H11V3.055z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M20.488 9H15V3.512A9.025 9.025 0 0120.488 9z"/></svg>
+        </div>
+        <span class="tool-card-name" data-en="Macro Calculator">Calculadora Macros</span>
+        <span class="tool-card-desc" data-en="Ideal proteins, carbohydrates and fats">Proteínas, carbohidratos y grasas ideales</span>
+      </a>
+
+      <a href="../grasa-corporal/" class="tool-card">
+        <div class="tool-card-icon">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" stroke-width="1.8"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M12 8v4l3 3"/></svg>
+        </div>
+        <span class="tool-card-name" data-en="Body Fat %">% Grasa corporal</span>
+        <span class="tool-card-desc" data-en="Body fat percentage using the Navy formula">Porcentaje de grasa con fórmula naval</span>
+      </a>
+
+      <a href="../ffmi/" class="tool-card">
+        <div class="tool-card-icon">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/></svg>
+        </div>
+        <span class="tool-card-name" data-en="FFMI Calculator">Calculadora FFMI</span>
+        <span class="tool-card-desc">Índice de masa muscular libre de grasa</span>
+      </a>
+
+      <a href="../agua-diaria/" class="tool-card">
+        <div class="tool-card-icon">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M12 2C8.13 2 5 8 5 12a7 7 0 0014 0c0-4-3.13-10-7-10z"/></svg>
+        </div>
+        <span class="tool-card-name" data-en="Daily Water">Agua diaria</span>
+        <span class="tool-card-desc">Litros de agua recomendados según tu perfil</span>
+      </a>
+
+    </div>
+  </div>
+</section>
 
 </main>
 
 <!-- ======= FOOTER ======= -->
-<footer style="background:var(--surface-2);border-top:1px solid var(--border);padding:2.5rem 0;margin-top:0">
-  <div class="max-w-6xl mx-auto px-4 sm:px-6">
-    <div class="flex flex-col gap-5">
-      <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
-        <div class="flex items-center gap-2">
-          <svg width="20" height="20" viewBox="0 0 28 28" fill="none" aria-hidden="true"><rect width="28" height="28" rx="7" fill="#2563EB"/><circle cx="14" cy="10" r="3.5" stroke="white" stroke-width="1.8" fill="none"/><path d="M7 21.5c0-3.87 3.13-7 7-7s7 3.13 7 7" stroke="white" stroke-width="1.8" stroke-linecap="round" fill="none"/></svg>
-          <span class="text-sm font-semibold" style="color:var(--text-primary)">IMC Calculadora</span>
-        </div>
-        <p class="text-xs" style="color:var(--text-muted)">Herramienta informativa gratuita. No sustituye el consejo médico profesional.</p>
+<footer class="site-footer no-print">
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <!-- Marca -->
+      <div>
+        <a href="../" class="footer-logo">
+          <span class="footer-logo-icon" aria-hidden="true">
+            <svg width="18" height="18" viewBox="0 0 28 28" fill="none"><circle cx="14" cy="10" r="3.5" stroke="white" stroke-width="1.8" fill="none"/><path d="M7 21.5c0-3.87 3.13-7 7-7s7 3.13 7 7" stroke="white" stroke-width="1.8" stroke-linecap="round" fill="none"/></svg>
+          </span>
+          <span class="footer-logo-name" data-en="BMI Calculator">IMC Calculadora</span>
+        </a>
+        <p class="footer-desc" data-en="Free health tools: BMI, daily calories (TDEE), ideal weight, basal metabolic rate, body fat %, FFMI and more. Based on WHO criteria, Mifflin-St Jeor and Harris-Benedict formulas.">Herramientas gratuitas de salud: IMC, calorías diarias (TDEE), peso ideal, tasa metabólica basal, % grasa corporal, FFMI y más. Basado en criterios OMS, fórmulas Mifflin-St Jeor y Harris-Benedict.</p>
       </div>
-      <div class="flex flex-wrap gap-x-5 gap-y-2 text-xs" style="color:var(--text-muted)">
-        <a href="../" class="hover:underline" style="color:inherit">Calculadora IMC</a>
-        <a href="../peso-ideal/" class="hover:underline" style="color:inherit">Peso Ideal</a>
-        <a href="../calorias-diarias/" class="hover:underline" style="color:inherit">Calorías Diarias</a>
-        <a href="../calorias-quemadas/" class="hover:underline" style="color:inherit">Calorías Quemadas</a>
-        <a href="../tmb/" class="hover:underline" style="color:inherit">TMB</a>
-        <a href="../macros/" class="hover:underline" style="color:inherit">Macros</a>
-        <a href="../ffmi/" class="hover:underline" style="color:inherit">FFMI</a>
-        <a href="../grasa-corporal/" class="hover:underline" style="color:inherit">Grasa Corporal</a>
-        <a href="../agua-diaria/" class="hover:underline" style="color:inherit">Agua Diaria</a>
-      </div>
-      <p class="text-xs" style="color:var(--text-muted);border-top:1px solid var(--border);padding-top:1rem">© 2026 IMC Calculadora · Criterios OMS · Solo orientativo</p>
+      <!-- Nav 1 -->
+      <nav aria-label="Peso y calorías">
+        <p class="footer-nav-title" data-en="Weight &amp; Calories">Peso y calorías</p>
+        <ul class="footer-nav-list">
+          <li><a href="../" data-en="BMI Calculator">Calculadora IMC</a></li>
+          <li><a href="../peso-ideal/" data-en="Ideal Weight Calculator">Calculadora Peso Ideal</a></li>
+          <li><a href="../calorias-diarias/" data-en="Daily Calories (TDEE)">Calorías Diarias (TDEE)</a></li>
+          <li><a href="../calorias-quemadas/" data-en="Calories Burned">Calorías Quemadas</a></li>
+        </ul>
+      </nav>
+      <!-- Nav 2 -->
+      <nav aria-label="Composición corporal">
+        <p class="footer-nav-title" data-en="Body Composition">Composición corporal</p>
+        <ul class="footer-nav-list">
+          <li><a href="../macros/" data-en="Macro Calculator">Calculadora de Macros</a></li>
+          <li><a href="../grasa-corporal/" data-en="Body Fat % (US Navy)">% Grasa Corporal (US Navy)</a></li>
+          <li><a href="../ffmi/" data-en="FFMI Index">Índice FFMI</a></li>
+          <li><a href="../agua-diaria/" data-en="Recommended Daily Water">Agua Diaria Recomendada</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="footer-bottom">
+      <p data-en="© 2026 BMI Calculator · All rights reserved.">© 2026 IMC Calculadora · Todos los derechos reservados.</p>
+      <p data-en="For guidance only · Not a substitute for medical advice · WHO criteria">Solo orientativo · No sustituye el consejo médico · Criterios OMS</p>
     </div>
   </div>
 </footer>
 
 <!-- Mobile CTA -->
-<div id="mobileCTA" class="hidden" style="position:fixed;bottom:0;left:0;right:0;padding:0.75rem 1rem;background:var(--surface);border-top:1px solid var(--border);z-index:40;display:none">
-  <a href="#calculadora" style="display:block;text-align:center;background:var(--accent);color:white;padding:0.75rem;border-radius:var(--radius);font-weight:600;font-size:0.9rem;text-decoration:none">
+<div id="mobileCTA" class="hidden no-print" style="position:fixed;bottom:0;left:0;right:0;padding:0.75rem 1rem;background:var(--surface);border-top:1px solid var(--border);z-index:40;box-shadow:0 -4px 16px rgba(0,0,0,0.08)">
+  <a href="#calculadora" class="btn-primary" style="text-decoration:none" data-en='Calculate my ideal weight <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/></svg>'>
     Calcular mi peso ideal
+    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/></svg>
   </a>
 </div>
 
@@ -542,6 +590,12 @@
 
   // ── Units ──────────────────────────────────────────────
   function setUnit(u) {
+    const switching = (_imperial !== (u === 'imperial'));
+    if (switching) {
+      const hEl = document.getElementById('height');
+      const h = parseFloat(hEl.value);
+      if (!isNaN(h) && h) hEl.value = (u === 'imperial' ? (h / 2.54) : (h * 2.54)).toFixed(1);
+    }
     _imperial = u === 'imperial';
     document.getElementById('btnMetric').classList.toggle('active', !_imperial);
     document.getElementById('btnImperial').classList.toggle('active', _imperial);
@@ -627,12 +681,18 @@
     document.getElementById('rangeLabel').textContent   = 'Rango: ' + (barMax - barMin).toFixed(1) + ' kg de diferencia';
 
     // Advice card
-    const sexLabel = _gender === 'male' ? 'hombre' : 'mujer';
+    var _isEn = localStorage.getItem('lang') === 'en';
+    const sexLabel = _isEn
+      ? (_gender === 'male' ? 'man' : 'woman')
+      : (_gender === 'male' ? 'hombre' : 'mujer');
     const heightDisplay = _imperial ? hVal.toFixed(1) + ' in' : hVal.toFixed(0) + ' cm';
-    document.getElementById('adviceText').innerHTML =
-      'Para un <strong>' + sexLabel + '</strong> de <strong>' + heightDisplay + '</strong>, la media de las tres fórmulas clínicas es <strong>' + average.toFixed(1) + ' kg</strong>. ' +
-      'El rango IMC saludable de la OMS sitúa ese peso entre <strong>' + imcMin.toFixed(1) + ' y ' + imcMax.toFixed(1) + ' kg</strong>. ' +
-      'Recuerda que estas cifras son orientativas y no sustituyen la valoración de un profesional de la salud.';
+    document.getElementById('adviceText').innerHTML = _isEn
+      ? 'For a <strong>' + sexLabel + '</strong> of <strong>' + heightDisplay + '</strong>, the average of the three clinical formulas is <strong>' + average.toFixed(1) + ' kg</strong>. ' +
+        'The WHO healthy BMI range places that weight between <strong>' + imcMin.toFixed(1) + ' and ' + imcMax.toFixed(1) + ' kg</strong>. ' +
+        'Remember that these figures are guidelines and do not replace the assessment of a health professional.'
+      : 'Para un <strong>' + sexLabel + '</strong> de <strong>' + heightDisplay + '</strong>, la media de las tres fórmulas clínicas es <strong>' + average.toFixed(1) + ' kg</strong>. ' +
+        'El rango IMC saludable de la OMS sitúa ese peso entre <strong>' + imcMin.toFixed(1) + ' y ' + imcMax.toFixed(1) + ' kg</strong>. ' +
+        'Recuerda que estas cifras son orientativas y no sustituyen la valoración de un profesional de la salud.';
   }
 
   function hideResults() {
@@ -673,6 +733,19 @@
 
   // Preset values
   calculate();
+
+  // Mobile CTA scroll handler
+  const mobileCTA = document.getElementById('mobileCTA');
+  window.addEventListener('scroll', () => {
+    const hero = document.getElementById('hero');
+    const heroBottom = hero.getBoundingClientRect().bottom;
+    if (heroBottom < 0 && window.innerWidth < 768) {
+      mobileCTA.classList.remove('hidden');
+    } else {
+      mobileCTA.classList.add('hidden');
+    }
+  }, { passive: true });
 </script>
+  <script src="../js/lang.js"></script>
 </body>
 </html>
