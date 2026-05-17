@@ -689,12 +689,15 @@ input[type=number] { -moz-appearance: textfield; }
 }
 /* TOOLS GRID (sección "otras herramientas") */
 .tools-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(185px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
   gap: 0.875rem;
+  justify-content: center;
 }
 .tool-card {
   display: flex; flex-direction: column; gap: 0.5rem;
+  flex: 1 1 185px;
+  max-width: 230px;
   padding: 1.125rem 1.25rem;
   background: var(--surface); border: 1px solid var(--border);
   border-radius: var(--radius-lg); text-decoration: none;
